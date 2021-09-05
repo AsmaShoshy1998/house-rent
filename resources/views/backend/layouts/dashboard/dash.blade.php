@@ -12,7 +12,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body"> <h4>Registered Tenants</h4></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="{{route('tenants.listall')}}">View Details</a>
+                                        <a class="small text-white stretched-link" href="{{route('tenants.list')}}">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

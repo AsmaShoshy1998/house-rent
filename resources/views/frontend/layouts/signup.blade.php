@@ -24,7 +24,7 @@
 @endif
 <body>
 
-<style type="text/css">
+<!-- <style type="text/css">
 body {
     background-image:url('https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
   background-position:center;
@@ -35,7 +35,7 @@ body {
   background-color: #17a2b8;
   height: 100vh;
 }
-</style>
+</style> -->
 
 <form action="{{route('user.signup.store')}}" type="form" method="post">
 @csrf
@@ -67,7 +67,7 @@ body {
  <label for="present_address" class="cols-sm-2 control-label">Present Address</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="text" class="form-control" name="Present Address" id="name" placeholder="Enter your Name">
+<input type="text" class="form-control" name="Present Address" id="name" placeholder="">
 </div>
 </div>
 </div>
@@ -75,7 +75,7 @@ body {
  <label for="permanent_address" class="cols-sm-2 control-label">Permanent Address</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="text" class="form-control" name="Permanent Address" id="name" placeholder="Enter your Name">
+<input type="text" class="form-control" name="Permanent Address" id="name" placeholder="">
 </div>
 </div>
 </div>
@@ -87,12 +87,12 @@ body {
 <div class="input-group">
 <select class="custom-select mr-sm-2" name="Occupation" id="inlineFormCustomSelect">
         <option selected>Choose...</option>
-        <option value="1">Engineer</option>
-        <option value="2">Doctor</option>
-        <option value="3">Banker</option>
-        <option value="1">Teacher</option>
-        <option value="2">Businessman</option>
-        <option value="3">Politicians</option>
+        <option >Engineer</option>
+        <option >Doctor</option>
+        <option >Banker</option>
+        <option >Teacher</option>
+        <option >Businessman</option>
+        <option >Politicians</option>
       </select>
 </div>
  </div>
@@ -125,8 +125,7 @@ body {
 </div>
 
 </div>
-</div>
-</div>
+
 
 </div>
 

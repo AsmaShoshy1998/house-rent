@@ -9,6 +9,7 @@ class UserController extends Controller
 {
     public function signupform()
     {
+        
     return view('frontend.layouts.signup');
     }
 
@@ -26,6 +27,7 @@ class UserController extends Controller
      'NID_Number'=>$request->NID_Number,
     'email'=>$request->email,
         'password'=>bcrypt($request->password),
+        'role'=>'tenant',
     ]);
     return redirect()->back()->with('success','User Registration Succeccfully.');
     }

@@ -1,21 +1,25 @@
 <div class="sb-sidenav-menu">
                         <div class="nav">
+                        <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-circle"></i></div>
+                                {{auth()->user()->full_name}}
+                            </a>
                             
                             <a class="nav-link" href="{{route('dashboard.dash')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="{{route('tenants.listall')}}">
+                            <a class="nav-link" href="{{route('tenants.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
                                 Tenants
                             </a>
-                            <a class="nav-link" href="{{route('landlords.listall')}}">
+                            <a class="nav-link" href="{{route('landlords.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Landlords
                             </a>
                           
                             
-                            <a class="nav-link" href="{{route('apartments.listall')}}">
+                            <a class="nav-link" href="{{route('apartments.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
                                 Apartmnets
                             </a>
@@ -70,13 +74,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                                 Invoices
                             </a>
-                            <a class="nav-link" href="{{route('admin.login')}}">
+                            <a class="nav-link" href="{{route('user.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                User
+                                Users
                             </a>
-                            <a class="nav-link" href="{{route('invoices.invoice')}}">
-                                <div class="sb-nav-link-icon"><i class="fa fa-cog"></i></div>
-                                Settings
-                            </a>
+                            
                             
                             
