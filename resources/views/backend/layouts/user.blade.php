@@ -22,7 +22,7 @@
   <tbody>
   @foreach($users as $user)
 <tr>
-<th scope="row">{{$user->user_id}}</th>
+<th scope="row">{{$user->id}}</th>
 <td scope="row">{{$user->full_name}}</td>
 <td scope="row">{{$user->role}}</td>
 <td scope="row">{{$user->NID_Number}}</td>
@@ -38,6 +38,7 @@
     
   </tbody>
 </table>
+{{$users->links('pagination::bootstrap-4')}}
 
 
 @endsection

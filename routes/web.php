@@ -28,7 +28,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[FrontendHome::class,'home'])->name(name:'home');
 Route::get('/signup',[UserController::class,'signupform'])->name(name:'user.signup');
 Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name:'user.signup.store');
-
+Route::get('/login',[UserController::class,'login'])->name('userlogin');
+Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
 
 
 

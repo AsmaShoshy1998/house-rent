@@ -21,10 +21,12 @@
 <th>ID</th>
 <th>Apartment Name</th>
 <th>Apartment Type</th>
+<th>Image</th>
 <th>Town Location</th>
 <th>Location</th>
 <th>Apartment Description</th>
 <th>Apartment Owner</th>
+<th>Rent</th>
 <th>Management fee Percentage</th>
 <th>Status</th>
 <th>Action</th>
@@ -44,9 +46,9 @@
   <th scope="row">{{$apartment->location}}</th>
   <th scope="row">{{$apartment->apartment_description}}</th>
   <th scope="row">{{$apartment->apartment_owner}}</th>
+  <th scope="row">{{$apartment->rent}}</th>
   <th scope="row">{{$apartment->managementfee_persentage}}.BDT</th>
   <th scope="row">{{$apartment->status}}</th>
-
   <td scope="row"><a href="#" class="btn btn-primary">View</a></td>
 </tr>
 @endforeach
@@ -72,7 +74,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action=" " type="form" method="post" enctype="multipart/form-data">
+        <form action="{{route('apartments.listPost')}}" type="form" method="post" enctype="multipart/form-data">
 @csrf
 
           <div class="form-group">
@@ -103,16 +105,20 @@
     </div>
     <div class="col-md-4 mb-3">
     <label for="validationDefault02">Location</label>
-      <input type="number" class="form-control" name='location' id="validationDefault02" placeholder="" value="" required>
+      <input type="text" class="form-control" name='location' id="validationDefault02" placeholder="" value="" required>
     </div>
     <div class="col-md-4 mb-3">
     <div class="form-group">
     <label for="inputAddress">Apartment Description</label>
-    <input type="number" class="form-control" name='apartment_description' id="inputAddress" placeholder=" ">
+    <input type="text" class="form-control" name='apartment_description' id="inputAddress" placeholder=" ">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Apartment Owner</label>
-    <input type="number" class="form-control" name='apartment_owner' id="inputAddress2" placeholder=" ">
+    <input type="text" class="form-control" name='apartment_owner' id="inputAddress2" placeholder=" ">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Rent</label>
+    <input type="text" class="form-control" name='rent' id="inputAddress2" placeholder=" ">
   </div>
      
   <div class="form-row">
@@ -121,7 +127,7 @@
     <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inputAddress2">Management fee Percentage</label>
-      <input type="number" class="form-control" name='rent' id="inputAddress2" placeholder=" ">
+      <input type="number" class="form-control" name='management_fee_percetage' id="inputAddress2" placeholder=" ">
     </div>
     <p> </p>
     

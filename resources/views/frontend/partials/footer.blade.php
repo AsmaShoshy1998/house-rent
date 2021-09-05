@@ -43,11 +43,10 @@
           </div>
           <div class="copyright-footer">
             <p class="copyright color-text-a">
-              &copy; Copyright
+             
               <span class="color-a">Asma Ahmed Shoshy</span> ID: 17103067.
             </p>
           </div>
-        </div>
-      </div>
+        
     </div>
   </footer>

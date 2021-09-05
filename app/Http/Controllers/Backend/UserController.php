@@ -45,7 +45,7 @@ class UserController extends Controller
     }
     public function landlordList()
     {
-        $landlords=user::all();
+        $landlords=user::paginate('2');
         return view('backend.layouts.landlord.list', compact('landlords'));
     }
     
@@ -53,7 +53,7 @@ class UserController extends Controller
     
     public function userList()
     {
-        $users=user::all();
+        $users=user::paginate('2');
         
         return view('backend.layouts.user', compact('users'));
     }

@@ -18,7 +18,7 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link active" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
@@ -50,59 +50,9 @@
       </button>
     </div>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Login
-</button>
+    <a class="btn btn-success" href= "{{route('userlogin')}}" role="button">Login</a>
   </nav>
 
-
-
-  <!-- Modal -->
  
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-
-<div class="modal-dialog">
-<div class="col-lg-8 col-sm-8 col-12 main-section">
-<div class="modal-content">
   
-<div class="col-lg-12 col-sm-12 col-12 user-img">
-<img src="{{url('/frontend/img/man01.png')}}">
-</div>
-<div class="col-lg-12 col-sm-12 col-12 user-name">
-<h1>User Login</h1>
-<button type="button" class="close" data-dismiss="modal">×</button>
-</div>
-<div class="col-lg-12 col-sm-12 col-12 form-input">
-<form action="#" type="form" method="Post">
-  @csrf
-<div class="form-group">
-<label for="validationDefault01">Email</label>
-<input name="user_email" type="email" class="form-control" placeholder="Enter email">
-</div>
-<div class="form-group">
-<label for="validationDefault01">Password</label>
-<input name="user_password" type="password" class="form-control" placeholder="Password">
-</div>
-<button type="submit" class="btn btn-success">Login</button>
-<br> </br>
-<a href="http://www.nicesnippets.com" target="_blank" >Forgot Password?</a>
-<br> </br>
-<button type="submit" class="btn btn-primary" href="contact.html" >Create Account</button>
-</form>
-</div>
-<a href="http://www.nicesnippets.com" target="_blank" ></a>
-<div class="col-lg-12 col-sm-12 col-12 link-part">
-  
-
-</div>
-</div>
-</div>
-</div>
-</div>

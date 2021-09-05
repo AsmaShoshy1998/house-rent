@@ -17,19 +17,30 @@ class ApartmentsController extends Controller
     }
     public function apartmentstore(Request $request)
     {
+        $fileName='';
+        if($request->hasFile('image'))
+        {
+           $file=$request->file('image');
+           $fileName=date('Ymdms').'.'.$file->getClientOriginalExtension();
+           $file->storeAs('/uploads',$fileName);
+
+        
+        }
     Apartment::create([
-        'apartment_id'=>$request->id,
-        'apartment_name'=>$request->house_type,
-        'apartment_type'=>$request->address,
-        'town_location'=>$request->house_owner,
-        'location'=>$request->number_of_rooms,
-        'apartment_description'=>$request->number_of_toilets,
-        'apartment_owner'=>$request->number_of_belcony,
+        
+        'apartment_name'=>$request->apartment_name,
+        'apartment_type'=>$request->apartment_type,
+        'town_location'=>$request->town_location,
+        'location'=>$request->location,
+        'apartment_description'=>$request->apartment_description,
+        'apartment_owner'=>$request->apartment_owner,
        'rent'=>$request->rent,
-       'images'=>$request->image,
+       'images'=>$fileName,
        'status'=>$request->status,
+       'managementfee_percentage'=>$request->management_fee_percetage
     
        ]);
+        // dd($request->all());
        return redirect()->back();
        }
 }

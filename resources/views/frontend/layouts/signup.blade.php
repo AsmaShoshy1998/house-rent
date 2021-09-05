@@ -22,11 +22,26 @@
         {{ session()->get('success') }}
     </div>
 @endif
+
+
+
+@if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+
+
 <body>
 
-<!-- <style type="text/css">
+<style type="text/css">
 body {
-    background-image:url('https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-image:url('https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); 
   background-position:center;
   background-size:cover;
 
@@ -35,7 +50,7 @@ body {
   background-color: #17a2b8;
   height: 100vh;
 }
-</style> -->
+</style>
 
 <form action="{{route('user.signup.store')}}" type="form" method="post">
 @csrf
@@ -43,7 +58,7 @@ body {
  <label for="name" class="cols-sm-2 control-label">Full Name</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name">
+<input  required type="text" class="form-control" name="name" id="name" placeholder="Enter your Name">
 </div>
 </div>
 </div>
@@ -51,7 +66,7 @@ body {
  <label for="number" class="cols-sm-2 control-label">NID Number</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="number" class="form-control" name="NID Number" id="name" placeholder="Enter your NID Number">
+<input required type="number" class="form-control" name="NID Number" id="name" placeholder="Enter your NID Number">
 </div>
 </div>
 </div>
@@ -59,7 +74,7 @@ body {
  <label for="number" class="cols-sm-2 control-label">Phone Number</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="number" class="form-control" name="Phone Number" id="name" placeholder="Enter your Phone Number">
+<input required type="number" class="form-control" name="Phone Number" id="name" placeholder="Enter your Phone Number">
 </div>
 </div>
 </div>
@@ -67,7 +82,7 @@ body {
  <label for="present_address" class="cols-sm-2 control-label">Present Address</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="text" class="form-control" name="Present Address" id="name" placeholder="">
+<input required type="text" class="form-control" name="Present Address" id="name" placeholder="">
 </div>
 </div>
 </div>
@@ -75,7 +90,7 @@ body {
  <label for="permanent_address" class="cols-sm-2 control-label">Permanent Address</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="text" class="form-control" name="Permanent Address" id="name" placeholder="">
+<input required type="text" class="form-control" name="Permanent Address" id="name" placeholder="">
 </div>
 </div>
 </div>
@@ -85,7 +100,7 @@ body {
 <label for="occupation" class="cols-sm-2 control-label">Occupation</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<select class="custom-select mr-sm-2" name="Occupation" id="inlineFormCustomSelect">
+<select required class="custom-select mr-sm-2" name="Occupation" id="inlineFormCustomSelect">
         <option selected>Choose...</option>
         <option >Engineer</option>
         <option >Doctor</option>
@@ -101,7 +116,7 @@ body {
 <label for="email" class="cols-sm-2 control-label">Email</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+<input required type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" />
 </div>
 </div>
 </div>
@@ -109,7 +124,7 @@ body {
 <label for="password" class="cols-sm-2 control-label">Password</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+<input required type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
 </div>
 </div>
 </div>
@@ -122,11 +137,6 @@ body {
 
 
 </form>
-</div>
 
-</div>
-
-
-</div>
 
 @endsection

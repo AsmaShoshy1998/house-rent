@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use App\Models\user;
 class UserController extends Controller
 {
     public function signupform()
@@ -12,10 +13,21 @@ class UserController extends Controller
         
     return view('frontend.layouts.signup');
     }
-
+    
 
     public function signupformPost(Request $request)
     {
+        // dd($request->all()); 
+        $request->validate([
+            'name' => 'required|max:255',
+            'NID_Number' => 'required',
+            'Phone_Number' => 'required',
+            'Present_Addres' => 'required',
+            'Permanent_Address' => 'required',
+            'Occupation' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ]);
         
     User::create([
      'full_name'=>$request->name,
@@ -30,6 +42,24 @@ class UserController extends Controller
         'role'=>'tenant',
     ]);
     return redirect()->back()->with('success','User Registration Succeccfully.');
+    }
+    public function login()
+    {   
+    return view('frontend.layouts.userlogin');
+    }
+
+
+    public function loginPost(Request $request)
+    {
+        $shoshy = $request->only('email', 'password');
+//      dd(Auth::attempt($shoshy));
+        if (Auth::attempt($shoshy)) 
+        {
+           
+            return redirect()->route('dashboard.dash');
+       
+        }
+        return redirect()->back()->with('success','invalid user info.');
     }
     
 

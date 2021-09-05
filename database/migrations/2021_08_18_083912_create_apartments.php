@@ -22,6 +22,7 @@ class CreateApartments extends Migration
             $table->string('apartment_description');
             $table->string('apartment_owner');
             $table->text('images');
+            $table->text('rent');
             $table->string('status', 10)->default('active');  
             $table->string('managementfee_percentage');
 
