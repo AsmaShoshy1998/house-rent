@@ -1,10 +1,10 @@
 <?php
 use App\Http\Controllers\Frontend\HomeController as FrontendHome;
 use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\HouseController;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\DashboardController;
-// use App\Http\Controllers\Backend\TenantsController;
-use App\Http\Controllers\Backend\LandlordsController;
 use App\Http\Controllers\Backend\ApartmentsController;
 use App\Http\Controllers\Backend\HousesController;
 use App\Http\Controllers\Backend\DepositeReportsController;
@@ -30,6 +30,8 @@ Route::get('/signup',[UserController::class,'signupform'])->name(name:'user.sign
 Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name:'user.signup.store');
 Route::get('/login',[UserController::class,'login'])->name('userlogin');
 Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
+Route::get('/about',[AboutController::class,'about'])->name(name:'user.about');
+Route::get('/house',[HouseController::class,'house'])->name(name:'user.house');
 
 
 

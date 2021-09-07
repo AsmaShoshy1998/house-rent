@@ -46,8 +46,8 @@
   <th scope="row">{{$apartment->location}}</th>
   <th scope="row">{{$apartment->apartment_description}}</th>
   <th scope="row">{{$apartment->apartment_owner}}</th>
-  <th scope="row">{{$apartment->rent}}</th>
-  <th scope="row">{{$apartment->managementfee_persentage}}.BDT</th>
+  <th scope="row">{{$apartment->rent}}BDT</th>
+  <th scope="row">{{$apartment->managementfee_percentage}}</th>
   <th scope="row">{{$apartment->status}}</th>
   <td scope="row"><a href="#" class="btn btn-primary">View</a></td>
 </tr>

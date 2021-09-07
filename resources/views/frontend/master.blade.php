@@ -8,8 +8,8 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="{{url('/frontend/img/favicon.png')}}" rel="icon">
-  <link href="{{url('/frontend/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+ 
+ 
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
