@@ -12,7 +12,6 @@ use App\Http\Controllers\Backend\PlacementFeesController;
 use App\Http\Controllers\Backend\IncomesController;
 use App\Http\Controllers\Backend\InvoicesController;
 use App\Http\Controllers\Backend\UserController as BackendUser;
-use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,8 +31,15 @@ Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name
 Route::get('/login',[UserController::class,'login'])->name('userlogin');
 Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
 
+
 Route::get('/about',[AboutController::class,'about'])->name(name:'user.about');
 Route::get('/house',[HouseController::class,'house'])->name(name:'user.house');
+Route::get('/house/1sthouse',[HouseController::class,'firsthouse'])->name(name:'1sthouse.view');
+
+
+Route::group(['prefix'=>'tenant','middleware'=>'auth'],function (){
+    Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+});
 
 
 
@@ -45,7 +51,7 @@ Route::get('/admin/login',[BackendUser::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[BackendUser::class,'loginPost'])->name('admin.loginPost');
 
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
+Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function() {
    
 
 

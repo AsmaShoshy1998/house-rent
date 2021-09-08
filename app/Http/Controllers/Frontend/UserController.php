@@ -63,6 +63,11 @@ class UserController extends Controller
         return redirect()->back()->with('success','invalid user info.');
     
     }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('userlogin');
+    }
 
 
 }

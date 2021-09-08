@@ -44,7 +44,7 @@ $items=['1','2','3','4','5','6'];
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href=" ">{{$data->address}}
+                    <a href="">{{$data->address}}
                       <br /> </a>
                   </h2>
                 </div>

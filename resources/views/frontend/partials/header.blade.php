@@ -53,8 +53,13 @@
      
     </div>
     @if(auth()->user())
-    <a class="btn btn-success" href= "" >{{auth()->user()->name}}</a>
-    <a class="btn btn-light" href= "{{route('user.signup')}}" role="button">Logout</a>
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i>{{auth()->user()->full_name}}</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="{{route('user.logout')}}">Logout</a></li>
+                    </ul>
 
     @else
 
