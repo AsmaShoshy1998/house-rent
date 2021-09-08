@@ -3,14 +3,22 @@
 
 @section('content')
 <h3>Users List</h3>
+
+@if(session()->has('message'))
+        <div class="row" style="padding: 10px;">
+            <span class="alert alert-success">{{session()->get('message')}}</span>
+        </div>
+    @endif
+
+
 <table class="table">
   <thead>
     <tr>
     <th scope="col">ID</th>
-<th scope="col">Full Name</th>
+<th scope="col">Name</th>
 <th scope="col">Type</th>
 <th scope="col">NID Number</th>
-<th scope="col">Phone Number</th>
+<th scope="col">Ph. Number</th>
 <th scope="col"> Present Address</th>
 <th scope="col">Permanent Address</th>
 <th scope="col">Occupation</th>
@@ -33,6 +41,8 @@
 <td scope="row">{{$user->email}}</td>
 
 <td scope="row"><a href="#" class="btn btn-primary">View</a></td>
+<td scope="row"><a href="{{route('user.edit',$user->id)}}" class="btn btn-primary">Edit</a></td>
+<td scope="row"><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('user.delete',$user->id)}}" class="btn btn-dark">Delete</a></td>
 </tr>
 @endforeach
     

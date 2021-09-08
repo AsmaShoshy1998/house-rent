@@ -14,7 +14,7 @@ class CreateLandlords extends Migration
     public function up()
     {
         Schema::create('landlords', function (Blueprint $table) {
-            $table->id('landlord_id');
+            $table->id();
             $table->string('full_name');
             $table->integer('NID_Number')->unique();
             $table->string('email_address');

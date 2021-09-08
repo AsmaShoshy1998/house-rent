@@ -19,10 +19,7 @@
                             </a>
                           
                             
-                            <a class="nav-link" href="{{route('apartments.list')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                Apartmnets
-                            </a>
+                            
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                                 Houses
@@ -31,8 +28,8 @@
                             <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('houses.listall')}}">List All</a>
-                                    <a class="nav-link" href="{{route('houses.listvacant')}}">List Vacant</a>
-                                    <a class="nav-link" href="{{route('houses.listoccupied')}}">List Occupied</a>
+                                    <a class="nav-link" href="">List Vacant</a>
+                                    <a class="nav-link" href="">List Occupied</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts4">
@@ -74,7 +71,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                                 Invoices
                             </a>
-                            <a class="nav-link" href="{{route('user.list')}}">
+                            <a class="nav-link" href="{{route('users.user')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
                                 Users
                             </a>

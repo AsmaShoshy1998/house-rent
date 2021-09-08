@@ -14,7 +14,7 @@ class CreatePlacementfees extends Migration
     public function up()
     {
         Schema::create('placementfees', function (Blueprint $table) {
-            $table->id('placement_id');
+            $table->id();
             $table->string('placement_month'); 
             $table->string('placement_year'); 
             $table->integer('total_rent_collection');

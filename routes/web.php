@@ -5,7 +5,7 @@ use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\HouseController;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Backend\ApartmentsController;
+
 use App\Http\Controllers\Backend\HousesController;
 use App\Http\Controllers\Backend\DepositeReportsController;
 use App\Http\Controllers\Backend\PlacementFeesController;
@@ -28,8 +28,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[FrontendHome::class,'home'])->name(name:'home');
 Route::get('/signup',[UserController::class,'signupform'])->name(name:'user.signup');
 Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name:'user.signup.store');
+
 Route::get('/login',[UserController::class,'login'])->name('userlogin');
 Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
+
 Route::get('/about',[AboutController::class,'about'])->name(name:'user.about');
 Route::get('/house',[HouseController::class,'house'])->name(name:'user.house');
 
@@ -41,6 +43,7 @@ Route::get('/house',[HouseController::class,'house'])->name(name:'user.house');
 // admin panel routes
 Route::get('/admin/login',[BackendUser::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[BackendUser::class,'loginPost'])->name('admin.loginPost');
+
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
    
@@ -55,13 +58,14 @@ Route::get('/logout',[BackendUser::class,'logout'])->name('logout');
 
 
 
-Route::get('/apartments/list',[ApartmentsController::class,'apartmentlist'])->name('apartments.list');
-Route::post('/apartments/store',[ApartmentsController::class,'apartmentstore'])->name('apartments.listPost');
+
 
 Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
-Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
-Route::get('/houses/listoccupied',[HousesController::class,'listoccupied'])->name('houses.listoccupied');
+// Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
+// Route::get('/houses/listoccupied',[HousesController::class,'listoccupied'])->name('houses.listoccupied');
 Route::post('/houses/store',[HousesController::class,'housepost'])->name('house.store');
+Route::get('/houses/delete/{id}',[HousesController::class,'delete'])->name('houses.delete');
+Route::get('/houses/edit',[HousesController::class,'houseedit'])->name('houses.edit');
 
 
 Route::get('/depositereports/alldeposites',[DepositeReportsController::class,'alldeposites'])->name('depositereports.alldeposites');
@@ -79,7 +83,13 @@ Route::get('/invoices',[InvoicesController::class,'invoice'])->name('invoices.in
 
 
 Route::get('/tenants',[BackendUser::class,'tenantList'])->name('tenants.list');
-Route::get('/users',[BackendUser::class,'userList'])->name('user.list');
+Route::get('/tenants/delete/{id}',[BackendUser::class,'tenantdelete'])->name('tenants.delete');
+Route::get('/tenants/edit/{id}',[BackendUser::class,'tenantedit'])->name('tenants.edit');
+
+
+Route::get('/users',[BackendUser::class,'userList'])->name('users.user');
+Route::get('/users/edit/{id}',[BackendUser::class,'useredit'])->name('user.edit');
+Route::get('/users/delete/{id}',[BackendUser::class,'userdelete'])->name('user.delete');
 Route::get('/landlords',[BackendUser::class,'landlordList'])->name('landlords.list');
 
 

@@ -21,8 +21,15 @@ class UserController extends Controller
 //      dd(Auth::attempt($shoshy));
         if (Auth::attempt($shoshy)) 
         {
-           
+        //    dd(auth()->user());
+        if(auth()->user()->role=='admin'){
             return redirect()->route('dashboard.dash');
+            
+        }else{
+            Auth::logout();
+            return redirect()->route('userlogin');
+        }
+            
        
         }
         return redirect()->back()->with('success','invalid user info.');
@@ -48,6 +55,21 @@ class UserController extends Controller
         $landlords=user::paginate('2');
         return view('backend.layouts.landlord.list', compact('landlords'));
     }
+    public function tenantedit($id)
+       {
+           return view('backend.layouts.tenants.edit');
+       }
+    public function tenantdelete($id)
+       {
+       
+         $tenants=user::find($id);
+        if($tenants)
+        {
+            $tenants->delete();
+            return redirect()->back()->with('message','Product Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No product found to delete.');
+       }
     
        
     
@@ -55,6 +77,22 @@ class UserController extends Controller
     {
         $users=user::paginate('2');
         
-        return view('backend.layouts.user', compact('users'));
+        return view('backend.layouts.users.user', compact('users'));
     }
+    public function useredit($id)
+    {
+        return view('backend.layouts.user.edit');
+    }
+    public function userdelete($id)
+       {
+       
+         $users=user::find($id);
+        if($users)
+        {
+            $users->delete();
+            return redirect()->back()->with('message','Product Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No product found to delete.');
+       }
+       
 }

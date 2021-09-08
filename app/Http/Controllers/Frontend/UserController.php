@@ -22,7 +22,7 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'NID_Number' => 'required',
             'Phone_Number' => 'required',
-            'Present_Addres' => 'required',
+            'Present_Address' => 'required',
             'Permanent_Address' => 'required',
             'Occupation' => 'required',
             'email' => 'required|email|unique:users',
@@ -51,17 +51,18 @@ class UserController extends Controller
 
     public function loginPost(Request $request)
     {
+        // dd($request->all());
         $shoshy = $request->only('email', 'password');
-//      dd(Auth::attempt($shoshy));
+    
         if (Auth::attempt($shoshy)) 
+        
         {
-           
-            return redirect()->route('dashboard.dash');
-       
+            return redirect()->route('home');
+            
         }
         return redirect()->back()->with('success','invalid user info.');
-    }
     
+    }
+
 
 }
-

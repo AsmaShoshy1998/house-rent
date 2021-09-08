@@ -135,7 +135,7 @@ margin-left: 4px;
 @endif
 
 
-				<form action="{{route('admin.loginPost')}}" method="post" >
+				<form action="{{route('user.loginPost')}}" method="post" >
                     @csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">

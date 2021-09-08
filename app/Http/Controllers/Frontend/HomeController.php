@@ -10,8 +10,8 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $houses=House::get()->take(8);
+        $houses=House::latest()->get()->take(6);
     //    dd($houses);
-    return view('frontend.layouts.home');
+    return view('frontend.layouts.home',compact('houses'));
     }
 }

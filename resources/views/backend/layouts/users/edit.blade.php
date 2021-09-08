@@ -1,11 +1,8 @@
-@extends('frontend.master')
+@extends('backend.master')
 
-@section('contents')
+@section('content')
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <div class="container">
 <div class="row justify-content-center">
@@ -14,7 +11,7 @@
     <br> </br>
     <br> </br>
     
-<div class="d-flex justify-content-center"><h3><b>Register</b></h3></div>
+<div class="d-flex justify-content-center"><h3><b>Update Register User</b></h3></div>
 <div class="card-body">
 
 @if(session()->has('success'))
@@ -39,20 +36,7 @@
 
 <body>
 
-<style type="text/css">
-body {
-    background-image:url('https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); 
-  background-position:center;
-  background-size:cover;
-
-  margin: 0;
-  padding: 0;
-  background-color: #17a2b8;
-  height: 100vh;
-}
-</style>
-
-<form action="{{route('user.signup.store')}}" type="form" method="post">
+<form action="" type="form" method="post">
 @csrf
 <div class="form-group">
  <label for="name" class="cols-sm-2 control-label">Full Name</label>
@@ -131,13 +115,12 @@ body {
 <div class="form-group">
 
 <div class="form-group ">
-<button type="submit" class="btn btn-success btn-lg btn-block login-button" href=" " >Create Account</button>
+<button type="submit" class="btn btn-success" href=" " >Submit</button>
 <br> </br>
 
 
 
 </form>
-<div class="text-center">Already have an account? <a href="{{route('userlogin')}}">Login here</a>.
 
 
 @endsection

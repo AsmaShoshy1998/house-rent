@@ -14,14 +14,18 @@ class HousesController extends Controller
         $houses= house::paginate('2');
     return view('backend.layouts.houses.listall',compact('houses'));
     }
-    public function listvacant()
+    public function houseedit()
     {
-    return view('backend.layouts.houses.listvacant');
+        return view('backend.layouts.houses.edit');
     }
-    public function listoccupied()
-    {
-    return view('backend.layouts.houses.listoccupied');
-    }
+    // public function listvacant()
+    // {
+    // return view('backend.layouts.houses.listvacant');
+    // }
+    // public function listoccupied()
+    // {
+    // return view('backend.layouts.houses.listoccupied');
+    // }
     public function housepost(Request $request)
     {
         // dd(date('Ymdms').'.'.$request->file('image')->getClientOriginalExtension());
@@ -36,7 +40,7 @@ class HousesController extends Controller
         
         }
     House::create([
-        'house_id'=>$request->id,
+        'id'=>$request->id,
         'house_type'=>$request->house_type,
         'address'=>$request->address,
         'house_owner'=>$request->house_owner,
@@ -49,6 +53,17 @@ class HousesController extends Controller
     
        ]);
        return redirect()->back();
+       }
+       public function delete($id)
+       {
+        //  dd($house_id);
+         $houses=house::find($id);
+        if($houses)
+        {
+            $houses->delete();
+            return redirect()->back()->with('message','Product Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No product found to delete.');
        }
 }
 

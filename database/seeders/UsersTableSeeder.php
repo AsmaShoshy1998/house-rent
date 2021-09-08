@@ -16,15 +16,15 @@ class UsersTableSeeder extends Seeder
         user::create
         (
             [
-                'user_id'=>'1',
+                'id'=>'1',
                 'full_name'=>'Admin',
                 'role'=>'admin',
                 'email'=>'admin@gmail.com',
-                'password'=>bcrypt('1234'),
+                'password'=>bcrypt('123456'),
                 'mobile_number'=>'01825449021',
                 'NID_Number'=>'123456',
                 'present_address'=>'Uttara',
-                'permanent_ad1234dress'=> 'Dhaka',
+                'permanent_address'=> 'Dhaka',
                 'occupation'=>'Moderator',
 
     

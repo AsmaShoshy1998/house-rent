@@ -37,9 +37,7 @@
             <a class="nav-link" href="">Contact</a>
           </li>
           <li class="nav-item">
-            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
+          
            
           
          
@@ -54,10 +52,18 @@
       </button>
      
     </div>
-    <a class="btn btn-success" href= "{{route('user.signup')}}" role="button">Signup</a>
-    <!-- Button trigger modal -->
+    @if(auth()->user())
+    <a class="btn btn-success" href= "" >{{auth()->user()->name}}</a>
+    <a class="btn btn-light" href= "{{route('user.signup')}}" role="button">Logout</a>
+
+    @else
+
     <a class="btn btn-success" href= "{{route('userlogin')}}" role="button">Login</a>
-    
+    <a class="btn btn-light" href= "{{route('user.signup')}}" role="button">Signup</a>
+    @endif
+
+
+
   </nav>
 
   

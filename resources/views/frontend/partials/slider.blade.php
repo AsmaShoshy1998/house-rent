@@ -16,7 +16,7 @@
                       <span class="color-b"> 24/B </span> Shukrabad
                      
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | 45000 BDT</span></a>
+                      <a href="#"><span class="price-a">rent | 3243 BDT</span></a>
                     </p>
                   </div>
                 </div>
@@ -39,7 +39,7 @@
                       <span class="color-b">48/A </span> Kanthal Bagan
                     
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | 50000 BDT</span></a>
+                      <a href="#"><span class="price-a">rent | 3545 BDT</span></a>
                     </p>
                   </div>
                 </div>
@@ -56,13 +56,13 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
+                    <p class="intro-title-top">Banani, Dhaka
+                      <br> 1230</p>
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One</h1>
+                      <span class="color-b">26/A </span> Road-14
+                      <br> House-02</h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | 30000 BDT</span></a>
+                      <a href="#"><span class="price-a">rent | 46547 BDT</span></a>
                       </p>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ class CreateDepositereports extends Migration
     public function up()
     {
         Schema::create('depositereports', function (Blueprint $table) {
-            $table->id('deposite_id');
+            $table->id();
             $table->string('full_name'); 
             $table->integer('house_id'); 
             $table->date('paid_on'); 
