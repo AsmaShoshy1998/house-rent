@@ -22,11 +22,12 @@
           </li>
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="">Property</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="{{route('user.house')}}">Houses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">News</a>
           </li>
 
           <li class="nav-item">
@@ -34,7 +35,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="">Contact</a>
+            <a class="nav-link" href="{{route('homecontact')}}">Contact</a>
           </li>
           <li class="nav-item">
           

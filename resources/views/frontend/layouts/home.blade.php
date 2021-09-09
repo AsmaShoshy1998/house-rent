@@ -16,12 +16,10 @@
         <div class="col-md-12">
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
-              <h2 class="title-a">Latest Properties</h2>
+              <h2 class="text-dark">Latest Houses</h2>
             </div>
             <div class="title-link">
-              <a href="property-grid.html">All Property
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -29,9 +27,6 @@
       <div class="row">
 
 
-@php 
-$items=['1','2','3','4','5','6'];
-@endphp
 @foreach($houses as $data)
     <div class="col-md-4">
     <div class="carousel-item-b">
@@ -52,7 +47,7 @@ $items=['1','2','3','4','5','6'];
                   <div class="price-box d-flex">
                     <span class="price-a">rent | {{$data->rent}}.BDT</span>
                   </div>
-                  <a href="#" class="link-a">Click here to view
+                  <a href="{{route('singleHouse.view',$data->id)}}" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -98,12 +93,10 @@ $items=['1','2','3','4','5','6'];
         <div class="col-md-12">
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
-              <h2 class="title-a">Latest News</h2>
+              <h2 class="text-dark">Latest News</h2>
             </div>
             <div class="title-link">
-              <a href="blog-grid.html">All News
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
+              
             </div>
           </div>
         </div>

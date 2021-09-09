@@ -28,7 +28,7 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($users as $user)
+  @foreach($users as $key=>$user)
 <tr>
 <th scope="row">{{$user->id}}</th>
 <td scope="row">{{$user->full_name}}</td>

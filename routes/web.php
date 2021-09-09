@@ -34,7 +34,8 @@ Route::post('/login/post',[UserController::class,'loginPost'])->name('user.login
 
 Route::get('/about',[AboutController::class,'about'])->name(name:'user.about');
 Route::get('/house',[HouseController::class,'house'])->name(name:'user.house');
-Route::get('/house/1sthouse',[HouseController::class,'firsthouse'])->name(name:'1sthouse.view');
+Route::get('/contact',[FrontendHome::class,'contact'])->name(name:'homecontact');
+Route::get('/house/view_house_details/{id}',[HouseController::class,'viewHouse'])->name(name:'singleHouse.view');
 
 
 Route::group(['prefix'=>'tenant','middleware'=>'auth'],function (){

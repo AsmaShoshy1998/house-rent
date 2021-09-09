@@ -37,7 +37,7 @@
 </tr>
 </thead>
 <tbody>
-@foreach($houses as $house)
+@foreach($houses as $key=>$house)
 <tr>
 <th scope="row">{{$house->id}}</th>
 <th scope="row">{{$house->house_type}}</th>

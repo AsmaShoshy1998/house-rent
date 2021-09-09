@@ -14,4 +14,9 @@ class HomeController extends Controller
     //    dd($houses);
     return view('frontend.layouts.home',compact('houses'));
     }
+    public function contact()
+    {
+        
+    return view('frontend.layouts.contact');
+    }
 }

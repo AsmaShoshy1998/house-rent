@@ -29,7 +29,7 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($tenants as $tenant)
+  @foreach($tenants as $key=>$tenant)
 <tr>
 <th scope="row">{{$tenant->id}}</th>
 <td scope="row">{{$tenant->full_name}}</td>
