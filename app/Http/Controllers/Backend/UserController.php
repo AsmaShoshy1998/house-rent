@@ -55,6 +55,11 @@ class UserController extends Controller
         $landlords=user::paginate('2');
         return view('backend.layouts.landlord.list', compact('landlords'));
     }
+    public function tenantview($id)
+       {
+        $tenants=user::find($id);
+           return view('backend.layouts.tenants.viewTenant',compact('tenants'));
+       }
     public function tenantedit($id)
        {
            return view('backend.layouts.tenants.edit');
@@ -75,10 +80,16 @@ class UserController extends Controller
     
     public function userList()
     {
-        $users=user::paginate('2');
+        
+        $users=user::paginate('8');
         
         return view('backend.layouts.users.user', compact('users'));
     }
+    public function userview($id)
+       {
+        $users=user::find($id);
+           return view('backend.layouts.users.viewUser',compact('users'));
+       }
     public function useredit($id)
     {
         return view('backend.layouts.user.edit');

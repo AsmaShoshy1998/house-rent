@@ -39,7 +39,8 @@
 <tbody>
 @foreach($houses as $key=>$house)
 <tr>
-<th scope="row">{{$house->id}}</th>
+<th scope="row">{{$key+1}}
+
 <th scope="row">{{$house->house_type}}</th>
   <th scope="row">{{$house->address}}</th>
   <th>
@@ -102,7 +103,7 @@
     <div class="form-group">
     <label for="exampleFormControlFile1">Image</label>
     <div class="custom-file">
-    <input type="file" class="form-control" name='image' >
+    <input type="file" class="form-control" name='image'>
     
     <br></br>
   </div>
@@ -133,7 +134,10 @@
       <input type="number" class="form-control" name='rent' id="inputAddress2" placeholder=" ">
     </div>
     <p> </p>
-    
+    <div class="form-group">
+     <label for="description">Description</label>
+     <textarea name="description" id="description" class="form-control" placeholder="Enter product description" ></textarea>
+    </div>
     
   </div>
   <div class="form-group">

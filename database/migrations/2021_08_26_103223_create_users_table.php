@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('present_address');
             $table->string('permanent_address');
             $table->string('occupation');
+            $table->text('images');
             $table->rememberToken(); 
             $table->timestamps();
         });

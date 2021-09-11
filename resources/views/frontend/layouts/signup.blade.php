@@ -52,7 +52,7 @@ body {
 }
 </style>
 
-<form action="{{route('user.signup.store')}}" type="form" method="post">
+<form action="{{route('user.signup.store')}}" type="form" method="post" enctype="multipart/form-data">
 @csrf
 <div class="form-group">
  <label for="name" class="cols-sm-2 control-label">Full Name</label>
@@ -62,6 +62,13 @@ body {
 </div>
 </div>
 </div>
+<div class="form-group">
+    <label for="exampleFormControlFile1">Image</label>
+    <div class="custom-file">
+    <input type="file" class="form-control" name='image'>
+    
+    <br></br>
+  </div>
 <div class="form-group">
  <label for="number" class="cols-sm-2 control-label">NID Number</label>
 <div class="cols-sm-10">
@@ -112,6 +119,7 @@ body {
 </div>
  </div>
 </div>
+
 <div class="form-group">
 <label for="email" class="cols-sm-2 control-label">Email</label>
 <div class="cols-sm-10">

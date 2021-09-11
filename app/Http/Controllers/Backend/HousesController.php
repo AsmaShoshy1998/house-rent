@@ -11,7 +11,7 @@ class HousesController extends Controller
 {
     public function listall()
     {
-        $houses= house::paginate('2');
+        $houses= house::paginate('4');
     return view('backend.layouts.houses.listall',compact('houses'));
     }
     public function houseedit()
@@ -48,6 +48,7 @@ class HousesController extends Controller
         'number_of_toilet'=>$request->number_of_toilets,
         'number_of_belcony'=>$request->number_of_belcony,
        'rent'=>$request->rent,
+       'description'=>$request->description,
        'images'=>$fileName,
        'status'=>$request->status,
     

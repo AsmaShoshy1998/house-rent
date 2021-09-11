@@ -18,6 +18,13 @@ class UserController extends Controller
     public function signupformPost(Request $request)
     {
         // dd($request->all()); 
+        $fileName='';
+        if($request->hasFile('image'))
+        {
+           $file=$request->file('image');
+           $fileName=date('Ymdms').'.'.$file->getClientOriginalExtension();
+           $file->storeAs('/uploads',$fileName);
+        }
         $request->validate([
             'name' => 'required|max:255',
             'NID_Number' => 'required',
@@ -25,6 +32,7 @@ class UserController extends Controller
             'Present_Address' => 'required',
             'Permanent_Address' => 'required',
             'Occupation' => 'required',
+            // 'images' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
@@ -37,10 +45,12 @@ class UserController extends Controller
      'permanent_address'=>$request->Permanent_Address,
      'occupation'=>$request->Occupation,
      'NID_Number'=>$request->NID_Number,
+     'images'=>$fileName,
     'email'=>$request->email,
         'password'=>bcrypt($request->password),
         'role'=>'tenant',
     ]);
+    // dd($request);
     return redirect()->back()->with('success','User Registration Succeccfully.');
     }
     public function login()
@@ -69,5 +79,5 @@ class UserController extends Controller
         return redirect()->route('userlogin');
     }
 
-
+    
 }

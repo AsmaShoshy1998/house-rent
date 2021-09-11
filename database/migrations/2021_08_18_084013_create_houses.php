@@ -24,6 +24,7 @@ class CreateHouses extends Migration
             $table->integer('number_of_belcony');
             $table->integer('rent');
             $table->text('images');
+            $table->text('description',2000);
             $table->string('status', 10)->default('active');  
            
             $table->timestamps();

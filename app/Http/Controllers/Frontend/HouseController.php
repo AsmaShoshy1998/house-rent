@@ -13,10 +13,12 @@ class HouseController extends Controller
         $houses=House::get()->take(18);
     return view('frontend.layouts.house',compact('houses'));
     }
-    public function viewHouse()
+    public function viewHouse($id)
     {
-        
-    return view('frontend.layouts.singleHouse');
+        $houses=House::find($id);
+        // $allHouses=House::get()->take(4);
+        // dd($id);
+    return view('frontend.layouts.singleHouse', compact('houses'));
     }
     
 }

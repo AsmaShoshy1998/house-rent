@@ -4,7 +4,7 @@
 @section('content')
 <br> </br>
 <h3>Tenants List</h3>
-<br> </br>
+
 
 @if(session()->has('message'))
         <div class="row" style="padding: 10px;">
@@ -17,6 +17,7 @@
     <tr>
     <th scope="col">ID</th>
 <th scope="col">Name</th>
+<th scope="col">Image</th>
 <!-- <th scope="col">Type</th> -->
 <th scope="col">NID Number</th>
 <th scope="col">Ph. Number</th>
@@ -31,9 +32,12 @@
   <tbody>
   @foreach($tenants as $key=>$tenant)
 <tr>
-<th scope="row">{{$tenant->id}}</th>
+<th scope="row">{{$key+1}}
+
 <td scope="row">{{$tenant->full_name}}</td>
-<!-- <td scope="row">{{$tenant->role}}</td> -->
+<th>
+<img src="{{url('/uploads/'.$tenant->images)}}" width="100px" alt="image">
+</th>
 <td scope="row">{{$tenant->NID_Number}}</td>
 <td scope="row">{{$tenant->mobile_number}}</td>
 <td scope="row">{{$tenant->present_address}}</td>
@@ -41,7 +45,7 @@
 <td scope="row">{{$tenant->occupation}}</td>
 <td scope="row">{{$tenant->email}}</td>
 
-<td scope="row"><a href="#" class="btn btn-primary">View</a></td>
+<td scope="row"><a href="{{route('tenants.viewTenant',$tenant->id)}}" class="btn btn-primary">View</a></td>
 <td scope="row"><a href="{{route('tenants.edit',$tenant->id)}}" class="btn btn-success">Edit</a></td>
 <td scope="row"><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('tenants.delete',$tenant->id)}}" class="btn btn-dark">Delete</a></td>
 </tr>

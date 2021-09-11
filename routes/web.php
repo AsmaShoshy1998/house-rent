@@ -90,11 +90,13 @@ Route::get('/invoices',[InvoicesController::class,'invoice'])->name('invoices.in
 
 
 Route::get('/tenants',[BackendUser::class,'tenantList'])->name('tenants.list');
+Route::get('/tenants/View/{id}',[BackendUser::class,'tenantview'])->name('tenants.viewTenant');
 Route::get('/tenants/delete/{id}',[BackendUser::class,'tenantdelete'])->name('tenants.delete');
 Route::get('/tenants/edit/{id}',[BackendUser::class,'tenantedit'])->name('tenants.edit');
 
 
 Route::get('/users',[BackendUser::class,'userList'])->name('users.user');
+Route::get('/users/View/{id}',[BackendUser::class,'userview'])->name('users.viewUser');
 Route::get('/users/edit/{id}',[BackendUser::class,'useredit'])->name('user.edit');
 Route::get('/users/delete/{id}',[BackendUser::class,'userdelete'])->name('user.delete');
 Route::get('/landlords',[BackendUser::class,'landlordList'])->name('landlords.list');
