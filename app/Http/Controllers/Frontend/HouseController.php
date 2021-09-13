@@ -20,5 +20,16 @@ class HouseController extends Controller
         // dd($id);
     return view('frontend.layouts.singleHouse', compact('houses'));
     }
+    public function search()
+    {
+        // dd($_GET['search']);
+        // $_GET['key']
+        // request()->key
+        $key=request()->search;
+        $houses=House::where('address','LIKE',"%{$key}%")->get();
+
+
+        return view('frontend.layouts.search',compact('houses'));
+    }
     
 }

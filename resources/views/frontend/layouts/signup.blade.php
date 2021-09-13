@@ -145,7 +145,7 @@ body {
 
 
 </form>
-<div class="text-center">Already have an account? <a href="{{route('userlogin')}}">Login here</a>.
+<div class="text-center">Already have an account? <a href="{{route('userlogin')}}">Login here</a>
 
 
 @endsection

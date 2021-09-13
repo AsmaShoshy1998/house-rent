@@ -38,19 +38,16 @@
             <a class="nav-link" href="{{route('homecontact')}}">Contact</a>
           </li>
           <li class="nav-item">
-          
-           
-          
-         
-          
-        </ul>
-        
+          <form action="{{route('search')}}" method="get">
+
+         <input style="width: 250px;" type="text" placeholder="Search" name="search" class="form-control">
+         <button type="submit" class="btn btn-success">
+         Search</button>
+         </form>
+                   
       </div>
      
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fas fa-search" aria-hidden="true"></span>
-      </button>
+     
      
     </div>
     @if(auth()->user())

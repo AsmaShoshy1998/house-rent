@@ -157,11 +157,11 @@ margin-left: 4px;
 						<input type="submit" value="Login" class="btn float-right login_btn">
 					</div>
 				</form>
-			</div>
-			
+			<br> </br>
 				<div class="d-flex justify-content-center">
 					<a href="#">Forgot your password?</a>
 				</div>
+				<div class="text-light">Don't have any account? Please<a href="{{route('user.signup')}}">Signup</a>
 			</div>
 		</div>
 	</div>

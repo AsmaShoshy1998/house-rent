@@ -30,6 +30,7 @@ Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name
 
 Route::get('/login',[UserController::class,'login'])->name('userlogin');
 Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
+Route::get('/search',[HouseController::class,'search'])->name('search');
 
 
 Route::get('/about',[AboutController::class,'about'])->name(name:'user.about');

@@ -101,6 +101,10 @@
                 </div>
               </div>
             </div>
+            
+
+
+
             <div class="col-md-7 col-lg-7 section-md-t3">
               <div class="row">
                 <div class="col-sm-12">
@@ -122,6 +126,8 @@
         <div class="col-md-10 offset-md-1">
           <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
             <li class="nav-item">
+
+            <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Rent Now </a>
        
               
   <!--/ Property Single End /-->

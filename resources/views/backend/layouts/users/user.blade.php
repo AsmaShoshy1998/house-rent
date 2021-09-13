@@ -29,7 +29,7 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($users as $key=>$user)
+  @foreach($use rs as $key=>$user)
  
 <tr>
 <th scope="row">{{$key+1}}
