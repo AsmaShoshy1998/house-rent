@@ -18,14 +18,16 @@ class UserController extends Controller
     public function loginPost(Request $request)
     {
         $shoshy = $request->only('email', 'password');
-//      dd(Auth::attempt($shoshy));
+
         if (Auth::attempt($shoshy)) 
         {
         //    dd(auth()->user());
-        if(auth()->user()->role=='admin'){
+        if(auth()->user()->role=='admin' || auth()->user()->role=='landlord')
+        {
             return redirect()->route('dashboard.dash');
             
-        }else{
+        }
+        else{
             Auth::logout();
             return redirect()->route('userlogin');
         }

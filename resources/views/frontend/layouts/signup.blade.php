@@ -13,6 +13,8 @@
 <div class="card">
     <br> </br>
     <br> </br>
+    <br> </br>
+    
     
 <div class="d-flex justify-content-center"><h3><b>Register</b></h3></div>
 <div class="card-body">
@@ -41,7 +43,7 @@
 
 <style type="text/css">
 body {
-    background-image:url('https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); 
+    background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'); 
   background-position:center;
   background-size:cover;
 

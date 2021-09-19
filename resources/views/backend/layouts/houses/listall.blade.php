@@ -53,9 +53,8 @@
   <th scope="row">{{$house->number_of_belcony}}</th>
   <th scope="row">{{$house->rent}}BDT</th>
   <th scope="row">{{$house->status}}</th>
-  <td scope="row"><a href="#" class="btn btn-info">View</a></td>
   <td scope="row"><a href="{{route('houses.edit',$house->id)}}" class="btn btn-danger">Edit</a></td>
-  <!-- <br> </br> -->
+  
   <td scope="row"><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('houses.delete',$house->id)}}" class="btn btn-dark">Delete</a></td>
   
 </tr>
@@ -113,16 +112,16 @@
     </div>
     <div class="col-md-4 mb-3">
     <label for="validationDefault02">Number of Rooms</label>
-      <input type="number" class="form-control" name='number_of_rooms' id="validationDefault02" placeholder="" value="" required>
+      <input type="number" class="form-control" min="0" name='number_of_rooms' id="validationDefault02" placeholder="" value="" required>
     </div>
     <div class="col-md-4 mb-3">
     <div class="form-group">
     <label for="inputAddress">Number of Toilets</label>
-    <input type="number" class="form-control" name='number_of_toilets' id="inputAddress" placeholder=" ">
+    <input type="number" class="form-control" min="0" name='number_of_toilets' id="inputAddress" placeholder=" ">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Number of Belcony</label>
-    <input type="number" class="form-control" name='number_of_belcony' id="inputAddress2" placeholder=" ">
+    <input type="number" class="form-control" min="0" name='number_of_belcony' id="inputAddress2" placeholder=" ">
   </div>
      
   <div class="form-row">
@@ -131,12 +130,12 @@
     <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inputAddress2">Rent</label>
-      <input type="number" class="form-control" name='rent' id="inputAddress2" placeholder=" ">
+      <input type="number" class="form-control" min="0" name='rent' id="inputAddress2" placeholder=" ">
     </div>
     <p> </p>
     <div class="form-group">
      <label for="description">Description</label>
-     <textarea name="description" id="description" class="form-control" placeholder="Enter product description" ></textarea>
+     <textarea name="description" id="description" class="form-control" placeholder="Enter House description" ></textarea>
     </div>
     
   </div>

@@ -26,6 +26,7 @@ class UsersTableSeeder extends Seeder
                 'present_address'=>'Uttara',
                 'permanent_address'=> 'Dhaka',
                 'occupation'=>'Moderator',
+                'images'=>'',
 
     
             ]);

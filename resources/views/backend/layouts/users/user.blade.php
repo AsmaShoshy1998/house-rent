@@ -24,12 +24,13 @@
 <th scope="col">Permanent Address</th>
 <th scope="col">Occupation</th>
 <th scope="col">Email</th>
+<th scope="col">Status</th>
 
 <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-  @foreach($use rs as $key=>$user)
+  @foreach($users as $key=>$user)
  
 <tr>
 <th scope="row">{{$key+1}}
@@ -45,6 +46,8 @@
 <td scope="row">{{$user->permanent_address}}</td>
 <td scope="row">{{$user->occupation}}</td>
 <td scope="row">{{$user->email}}</td>
+<td scope="row">{{$user->status}}</td>
+
 
 <td scope="row"><a href="{{route('users.viewUser',$user->id)}}" class="btn btn-primary">View</a></td>
 <td scope="row"><a href="{{route('user.edit',$user->id)}}" class="btn btn-success">Edit</a></td>

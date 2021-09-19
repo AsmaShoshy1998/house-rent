@@ -43,12 +43,8 @@
          <input style="width: 250px;" type="text" placeholder="Search" name="search" class="form-control">
          <button type="submit" class="btn btn-success">
          Search</button>
-         </form>
-                   
+         </form>    
       </div>
-     
-     
-     
     </div>
     @if(auth()->user())
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">

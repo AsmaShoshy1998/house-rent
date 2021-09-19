@@ -78,7 +78,7 @@
                       <span>{{$houses->address}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>House Type:</strong>
+                      <strong>Type:</strong>
                       <span>{{$houses->house_type}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
@@ -127,7 +127,7 @@
           <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
             <li class="nav-item">
 
-            <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Rent Now </a>
+            <a href="{{route('houserent')}}" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Rent Now </a>
        
               
   <!--/ Property Single End /-->

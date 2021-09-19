@@ -22,7 +22,7 @@ class HouseController extends Controller
     }
     public function search()
     {
-        // dd($_GET['search']);
+        
         // $_GET['key']
         // request()->key
         $key=request()->search;
@@ -31,5 +31,6 @@ class HouseController extends Controller
 
         return view('frontend.layouts.search',compact('houses'));
     }
+    
     
 }

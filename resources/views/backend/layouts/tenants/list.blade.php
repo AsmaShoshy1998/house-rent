@@ -25,6 +25,7 @@
 <th scope="col">Permanent Address</th>
 <th scope="col">Occupation</th>
 <th scope="col">Email</th>
+<th scope="col">Status</th>
 
 <th scope="col">Action</th>
     </tr>
@@ -44,6 +45,7 @@
 <td scope="row">{{$tenant->permanent_address}}</td>
 <td scope="row">{{$tenant->occupation}}</td>
 <td scope="row">{{$tenant->email}}</td>
+<td scope="row">{{$tenant->status}}</td>
 
 <td scope="row"><a href="{{route('tenants.viewTenant',$tenant->id)}}" class="btn btn-primary">View</a></td>
 <td scope="row"><a href="{{route('tenants.edit',$tenant->id)}}" class="btn btn-success">Edit</a></td>
