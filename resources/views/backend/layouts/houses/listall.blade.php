@@ -53,9 +53,11 @@
   <th scope="row">{{$house->number_of_belcony}}</th>
   <th scope="row">{{$house->rent}}BDT</th>
   <th scope="row">{{$house->status}}</th>
-  <td scope="row"><a href="{{route('houses.edit',$house->id)}}" class="btn btn-danger">Edit</a></td>
   
-  <td scope="row"><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('houses.delete',$house->id)}}" class="btn btn-dark">Delete</a></td>
+  <td><a href="{{route('houses.edit',$house->id)}}"><i class='fas fa-user-edit'></i></a> </td>
+  <td><a href="{{route('houses.delete',$house->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
+
+
   
 </tr>
 @endforeach

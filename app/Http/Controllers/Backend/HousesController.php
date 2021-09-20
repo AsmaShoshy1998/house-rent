@@ -8,6 +8,7 @@ use App\Models\house;
 
 class HousesController extends Controller
 {
+    
     public function listall()
     {
         $houses= house::paginate('4');

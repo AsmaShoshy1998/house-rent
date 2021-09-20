@@ -8,6 +8,7 @@ use App\Http\Controllers\Frontend\HouseController;
 
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\HousesController;
 use App\Http\Controllers\Backend\RentController as BackendRentList;
 use App\Http\Controllers\Backend\DepositeReportsController;
@@ -69,6 +70,13 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
     Route::group(['middleware'=>'role'],function (){
 
 
+        Route::get('/categories/houses',[CategoryController::class,'category'])->name('categories.list');
+        Route::post('/categories/store',[CategoryController::class,'categorystore'])->name('category.store');
+        Route::get('/categories/delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
+        Route::get('/categories/edit/{id}',[CategoryController::class,'edit'])->name('categories.edit');
+      Route::put('/categories/update/{id}',[CategoryController::class,'update'])->name('category.put');
+
+
        Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
 // Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
       Route::get('/houses/bookingList',[BackendRentList::class,'bookingList'])->name('houses.bookingList');
@@ -76,7 +84,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
       Route::post('/houses/store',[HousesController::class,'housepost'])->name('house.store');
       Route::get('/houses/delete/{id}',[HousesController::class,'delete'])->name('houses.delete');
       Route::get('/houses/edit/{id}',[HousesController::class,'houseedit'])->name('houses.edit');
-      Route::put('/products/update/{id}',[HousesController::class,'update'])->name('houses.put');
+      Route::put('/houses/update/{id}',[HousesController::class,'update'])->name('houses.put');
 
 
       Route::get('/depositereports/alldeposites',[DepositeReportsController::class,'alldeposites'])->name('depositereports.alldeposites');

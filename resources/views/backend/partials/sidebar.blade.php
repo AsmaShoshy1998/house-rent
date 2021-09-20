@@ -15,12 +15,15 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
                                 Tenants
                             </a>
-                            <a class="nav-link" href="{{route('landlords.list')}}">
+                            <a class="nav-link" href="{{route('users.user')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Landlords
+                                Users
                             </a>
                           
-                            
+                            <a class="nav-link" href="{{route('categories.list')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-city"></i></div>
+                                Category
+                            </a>
                             
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
@@ -35,11 +38,7 @@
                                     
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts4">
-                                <div class="sb-nav-link-icon"><i class="fas fa-dollar-sign"></i></div>
-                                Deposite Reports
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
+                            
                             <div class="collapse" id="collapseLayouts4" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('depositereports.alldeposites')}}">All Deposites</a>
@@ -74,10 +73,11 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                                 Invoices
                             </a>
-                            <a class="nav-link" href="{{route('users.user')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                Users
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="fas fa-layer-group"></i></div>
+                              Report
                             </a>
+                            
 
                             @endif
 
