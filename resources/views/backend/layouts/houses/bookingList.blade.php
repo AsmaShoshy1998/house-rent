@@ -52,10 +52,9 @@
   <th scope="row">{{$rent->description}}</th>
   <th scope="row">{{$rent->house_id}}</th>
   
-  <td scope="row"><a href="#" class="btn btn-info">View</a></td>
-  <td scope="row"><a href="{{route('houses.edit',$rent->id)}}" class="btn btn-danger">Edit</a></td>
-  <!-- <br> </br> -->
-  <td scope="row"><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('houses.delete',$rent->id)}}" class="btn btn-dark">Delete</a></td>
+  
+  <td><a href="#"><i class='fas fa-check-double'></i></a> </td>
+  <td><a href="{{route('houses.delete',$rent->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this booking?');"  class="fas fa-times"></i></a> </td>
   
 </tr>
 @endforeach

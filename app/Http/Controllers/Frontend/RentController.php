@@ -5,14 +5,16 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Rent;
 use App\Models\house;
+use App\Models\user;
 use Illuminate\Http\Request;
 
 class RentController extends Controller
 {
-    public function houserent()
+    public function houserent($id)
     {
-        $houses=House::all();
-        return view('frontend.layouts.houserent',compact('houses'));
+        $rents=Rent::all();
+        $houses=House::find($id);;
+        return view('frontend.layouts.houserent',compact('houses','rents'));
     }
     public function houserentPost(Request $request)
     {

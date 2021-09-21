@@ -34,11 +34,14 @@ Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name
 
 Route::get('/login',[UserController::class,'login'])->name('userlogin');
 Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
+Route::get('/userprofile/view',[UserController::class,'profileview'])->name('profile.view');
+
+
 Route::get('/search',[HouseController::class,'search'])->name('search');
 
 
 
-Route::get('/renthouse',[RentController::class,'houserent'])->name('houserent');
+Route::get('/renthouse/{id}',[RentController::class,'houserent'])->name('houserent');
 Route::post('/renthouse/store',[RentController::class,'houserentPost'])->name('houserent.post');
 
 
@@ -53,8 +56,9 @@ Route::get('/house/view_house_details/{id}',[HouseController::class,'viewHouse']
 
 
 
-Route::group(['prefix'=>'tenant','middleware'=>'auth'],function (){
+Route::group(['prefix'=>'tenant','middleware'=>'auth','role'],function (){
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+    
 });
 
 
@@ -108,7 +112,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
 
       Route::get('/users',[BackendUser::class,'userList'])->name('users.user');
-      Route::get('/users/View/{id}',[BackendUser::class,'userview'])->name('users.viewUser');
       Route::get('/users/edit/{id}',[BackendUser::class,'useredit'])->name('user.edit');
       Route::get('/users/delete/{id}',[BackendUser::class,'userdelete'])->name('user.delete');
       Route::get('/landlords',[BackendUser::class,'landlordList'])->name('landlords.list');

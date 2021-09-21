@@ -72,6 +72,7 @@
   <script src="{{url('/frontend/js/scrollreveal.min.js')}}"></script>
   <!-- Contact Form JavaScript File -->
   <script src="{{url('/frontend/js/contactform.js')}}"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <!-- Template Main Javascript File -->
   <script src="{{url('/frontend/js/main.js')}}"></script>

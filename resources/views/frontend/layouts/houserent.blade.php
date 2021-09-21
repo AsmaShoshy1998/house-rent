@@ -48,7 +48,7 @@
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">Full Name</span>
-<input class="form-control" type="text" name="full_name" placeholder="Enter your name">
+<input  class="form-control" type="text" name="full_name" placeholder="Enter your name">
 </div>
 </div>
 <div class="col-sm-6">
@@ -81,14 +81,7 @@
 <div class="row">
 <div class="col-sm-6">
 <div class="form-group">
-<div class="text-light">
-                            <label for="product_name">Select House</label>
-                            <select class="form-control" type="text" name="house_id" id="">
-                                @foreach($houses as $house)
-                                <option value="{{$house->id}}">{{$house->id}}</option>
-                                @endforeach
-                            </select>
-                            </div>
+
 </div>
 </div>
 <div class="col-sm-7">

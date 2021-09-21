@@ -48,7 +48,7 @@
  
   <th scope="row">{{$category->status}}</th>
   
-  
+  <td scope="row"><a href="#" class="btn btn-info">View</a></td>
   <td><a href="{{route('categories.edit',$category->id)}}"><i class='fas fa-edit'></i></a></td>
   <td> <a href="{{route('category.delete',$category->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a>  </td>
 

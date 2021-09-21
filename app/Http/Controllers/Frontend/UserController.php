@@ -79,5 +79,10 @@ class UserController extends Controller
         return redirect()->route('userlogin');
     }
 
+    public function profileview()
+    {
+        return view('frontend.layouts.profileView');
+    }
+
     
 }

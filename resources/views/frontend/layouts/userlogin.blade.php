@@ -158,10 +158,8 @@ margin-left: 4px;
 					</div>
 				</form>
 			<br> </br>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
-				</div>
-				<div class="text-light">Don't have any account? Please<a href="{{route('user.signup')}}">Signup</a>
+				
+				<div class="text-light">Don't have any account? Please <a href="{{route('user.signup')}}">Signup</a>
 			</div>
 		</div>
 	</div>

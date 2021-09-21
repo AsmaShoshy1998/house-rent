@@ -87,11 +87,11 @@ class UserController extends Controller
         
         return view('backend.layouts.users.user', compact('users'));
     }
-    public function userview($id)
-       {
-        $users=user::find($id);
-           return view('backend.layouts.users.viewUser',compact('users'));
-       }
+    // public function userview($id)
+    //    {
+    //     $users=user::find($id);
+    //        return view('backend.layouts.users.viewUser',compact('users'));
+    //    }
     public function useredit($id)
     {
         return view('backend.layouts.user.edit');

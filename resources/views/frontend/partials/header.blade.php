@@ -40,9 +40,11 @@
           <li class="nav-item">
           <form action="{{route('search')}}" method="get">
 
-         <input style="width: 250px;" type="text" placeholder="Search" name="search" class="form-control">
-         <button type="submit" class="btn btn-success">
-         Search</button>
+         <!-- <input style="width: 250px;" type="text" placeholder="Search" name="search" class="form-control"> -->
+         <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search for..." />
+                    <button class="btn btn-radient-danger" id="btnNavbarSearch" type="submit"><i class="fas fa-search"></i></button>
+                </div>
          </form>    
       </div>
     </div>
@@ -51,7 +53,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i>{{auth()->user()->full_name}}</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="{{route('profile.view')}}">My Profile</a></li>
                         <li><a class="dropdown-item" href="{{route('user.logout')}}">Logout</a></li>
                     </ul>
 
