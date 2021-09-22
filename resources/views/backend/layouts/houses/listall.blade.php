@@ -107,7 +107,7 @@
     <input type="file" class="form-control" name='image'>
     
     <br></br>
-  </div>
+  </div>   
     <div class="col-md-4 mb-3">
     <label for="validationDefault02">House Owner</label>
       <input type="text" class="form-control" name='house_owner' id="validationDefault02" placeholder="" value="" required>

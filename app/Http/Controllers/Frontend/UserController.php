@@ -67,7 +67,7 @@ class UserController extends Controller
         if (Auth::attempt($shoshy)) 
         
         {
-            return redirect()->route('home');
+            return redirect()->intended();
             
         }
         return redirect()->back()->with('success','invalid user info.');
