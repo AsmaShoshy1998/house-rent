@@ -47,9 +47,9 @@
 <td scope="row">{{$tenant->email}}</td>
 <td scope="row">{{$tenant->status}}</td>
 
-<td scope="row"><a href="{{route('tenants.viewTenant',$tenant->id)}}" class="btn btn-primary">View</a></td>
-<td><a href="{{route('tenants.edit',$tenant->id)}}"><i class='fas fa-user-edit'></i></a> </td>
-  <td><a href="{{route('tenants.delete',$tenant->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
+<td><a href="#"><i class='fas fa-check-double'></i></a> </td>
+  <td><a href="{{route('tenants.delete',$tenant->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this user?');"  class="fas fa-times"></i></a> </td>
+
 
 </tr>
 @endforeach

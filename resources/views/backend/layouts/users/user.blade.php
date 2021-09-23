@@ -49,9 +49,9 @@
 <td scope="row">{{$user->status}}</td>
 
 
+<td><a href="#"><i class='fas fa-check-double'></i></a> </td>
+  <td><a href="{{route('user.delete',$user->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this user?');"  class="fas fa-times"></i></a> </td>
 
-<td><a href="{{route('user.edit',$user->id)}}"><i class='fas fa-user-edit'></i></a> </td>
-  <td><a href="{{route('user.delete',$user->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
 </tr>
 @endforeach
     

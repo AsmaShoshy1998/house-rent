@@ -55,7 +55,7 @@ Route::get('/house/view_house_details/{id}',[HouseController::class,'viewHouse']
 
 
 
-Route::group(['prefix'=>'tenant','middleware'=>'authuser'],function (){
+Route::group(['prefix'=>'tenant','middleware'=>'authuser','role'],function (){
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
     Route::get('/renthouse/{id}',[RentController::class,'houserent'])->name('houserent');
 Route::post('/renthouse/store',[RentController::class,'houserentPost'])->name('houserent.post');

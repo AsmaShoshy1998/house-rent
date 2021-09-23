@@ -37,12 +37,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="grid-option">
-            <form>
-              <select class="custom-select">
-                <option selected>Search</option>
-                
-              </select>
-            </form>
+            
           </div>
         </div>
         <div class="row">
