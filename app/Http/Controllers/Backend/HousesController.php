@@ -12,7 +12,7 @@ class HousesController extends Controller
     public function listall()
     {
         $houses= house::paginate('4');
-    return view('backend.layouts.houses.listall',compact('hou          ses'));
+    return view('backend.layouts.houses.listall',compact('houses'));
     }
     public function houseedit($id)
     {

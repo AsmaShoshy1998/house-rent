@@ -25,14 +25,17 @@
 <thead class="thead-primary">
 <tr>
 <th>ID</th>
-<th>Full Name</th>
+<th>Name</th>
 <th>Email</th>
-<th>Phone No.</th>
+<th>Number</th>
 <th>Address</th>
-<th>Beginning Period</th>
-<th>Ending Period</th>
-<th>Reason for Rent</th>
 <th>House ID</th>
+<th>Booked by User Name</th>
+<th>Booked by User Email</th>
+<th>Beginning Period</th>
+<!-- <th>Ending Period</th> -->
+<th>Reason for Rent</th>
+<!-- <th>House ID</th> -->
 <th>Action</th>
 </tr>
 </thead>
@@ -47,14 +50,17 @@
   
   <th scope="row">{{$rent->phone_number}}</th>
   <th scope="row">{{$rent->address}}</th>
-  <th scope="row">{{$rent->beginning_time}}</th>
-  <th scope="row">{{$rent->ending_time}}</th>
-  <th scope="row">{{$rent->description}}</th>
   <th scope="row">{{$rent->house_id}}</th>
+  <th scope="row">{{$rent->user_name}}</th>
+  <th scope="row">{{$rent->user_email}}</th>
+  <th scope="row">{{$rent->beginning_time}}</th>
+  
+  <th scope="row">{{$rent->description}}</th>
+  <!-- <th scope="row">{{$rent->house_id}}</th> -->
   
   
   <td><a href="#"><i class='fas fa-check-double'></i></a> </td>
-  <td><a href="{{route('houses.delete',$rent->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this booking?');"  class="fas fa-times"></i></a> </td>
+  <td><a href="{{route('houses.bookingList.disapproved',$rent->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this booking?');"  class="fas fa-times"></i></a> </td>
   
 </tr>
 @endforeach
@@ -62,7 +68,7 @@
 </tbody>
 </table>
 
-
+{{$rents->links('pagination::bootstrap-4')}}
 
 </div>
 </div>

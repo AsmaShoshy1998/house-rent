@@ -12,21 +12,29 @@ class RentController extends Controller
 {
     public function houserent($id)
     {
-        $rents=Rent::all();
-        $houses=House::find($id);;
-        return view('frontend.layouts.houserent',compact('houses','rents'));
+        $rents=Rent::with('User');
+        $users=User::all();
+        $houses=House::find($id);
+        return view('frontend.layouts.houserent',compact('users','rents','houses'));
     }
     public function houserentPost(Request $request)
     {
+        $rent = Rent::where('house_id',$request->id)->first();
+        if($rent){
+            return redirect()->back()->with('success','already booked.'); 
+        }
         Rent::create([
             'full_name'=>$request->full_name,
             'email'=>$request->email,
             'phone_number'=>$request->phone_number,
             'address'=>$request->address,
             'beginning_time'=>$request->beginning_period,
-            'ending_time'=>$request->ending_time,
             'description'=>$request->reason,
-           'house_id'=>$request->house_id,
+            'user_name' =>$request->name,
+            'user_email' =>$request->email,
+            'house_id'=>$request->id,
+           
+       
            ]);
         //    dd($request);
            return redirect()->back()->with('success','House Rent Successfully.');

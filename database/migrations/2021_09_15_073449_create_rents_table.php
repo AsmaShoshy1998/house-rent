@@ -16,9 +16,11 @@ class CreateRentsTable extends Migration
             $table->string('phone_number');
             $table->string('address');
             $table->date('beginning_time');
-            $table->date('ending_time');
+            $table->string('user_name');
+            $table->string('user_email');
+            // $table->date('ending_time');
             $table->text('description');
-            $table->integer('house_id')->unique();
+            $table->integer('house_id');
             $table->timestamps();
         });
     }

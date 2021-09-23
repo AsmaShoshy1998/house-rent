@@ -85,6 +85,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
        Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
 // Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
       Route::get('/houses/bookingList',[BackendRentList::class,'bookingList'])->name('houses.bookingList');
+      Route::get('/houses/bookingList/disapproved/{id}',[BackendRentList::class,'bookingdisapproved'])->name('houses.bookingList.disapproved');
+
 
       Route::post('/houses/store',[HousesController::class,'housepost'])->name('house.store');
       Route::get('/houses/delete/{id}',[HousesController::class,'delete'])->name('houses.delete');

@@ -67,13 +67,40 @@
 <input class="form-control" type="text" name="address" placeholder="Enter your phone number">
 </div>
 <div class="form-group">
+<span class="form-label">House ID</span>
+<input value="{{$houses->id}}" class="form-control" type="text" name="id" placeholder="Enter your phone number">
+</div>
+<div class="text-light">
+<p> <h4>Booking by </h4></p>
+</div>
+<div class="col-sm-5">
+<div class="form-group">
+<span class="form-label">Full Name</span>
+<select class="form-control" name="name" id="">
+                                @foreach($users as $data)
+                                <option >{{$data->full_name}}</option>
+                                @endforeach
+                            </select>
+</div>
+</div>
+<div class="col-sm-5">
+<div class="form-group">
+<span class="form-label">Email</span>
+<select class="form-control" name="email" id="">
+                                @foreach($users as $data)
+                                <option>{{$data->email}}</option>
+                                @endforeach
+                            </select>
+</div>
+</div>
+<div class="form-group">
 <span class="form-label">For the Beginning Period</span>
 <input class="form-control" type="date" name="beginning_period" placeholder="Enter ZIP/Location">
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
 <span class="form-label">and Ending Period</span>
 <input class="form-control" type="date" name="ending_time" placeholder="Enter ZIP/Location">
-</div>
+</div> -->
 <div class="form-group">
 <span class="form-label">Reason for Rent the House</span>
 <textarea type="text" id="description" name="reason" class="form-control" placeholder="Write a Reason" ></textarea>
