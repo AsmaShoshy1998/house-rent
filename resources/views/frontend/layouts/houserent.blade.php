@@ -32,6 +32,9 @@
     <br> </br>
     <br> </br>
     <br> </br>
+    <br> </br>
+    <br> </br>
+    <br> </br>
 <h1>Rent a House</h1>
 
 
@@ -68,7 +71,7 @@
 </div>
 <div class="form-group">
 <span class="form-label">House ID</span>
-<input value="{{$houses->id}}" class="form-control" type="text" name="id" placeholder="Enter your phone number">
+<input value="{{$houses->id}}" class="form-control" type="number" name="id" placeholder="Enter your phone number">
 </div>
 <div class="text-light">
 <p> <h4>Booking by </h4></p>

@@ -34,7 +34,7 @@ Route::post('/signup/store',[UserController::class,'signupformPost'])->name(name
 
 Route::get('/login',[UserController::class,'login'])->name('userlogin');
 Route::post('/login/post',[UserController::class,'loginPost'])->name('user.loginPost');
-Route::get('/userprofile/view',[UserController::class,'profileview'])->name('profile.view');
+
 
 
 Route::get('/search',[HouseController::class,'search'])->name('search');
@@ -56,9 +56,12 @@ Route::get('/house/view_house_details/{id}',[HouseController::class,'viewHouse']
 
 
 Route::group(['prefix'=>'tenant','middleware'=>'authuser','role'],function (){
+
+    
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
     Route::get('/renthouse/{id}',[RentController::class,'houserent'])->name('houserent');
 Route::post('/renthouse/store',[RentController::class,'houserentPost'])->name('houserent.post');
+Route::get('/userprofile/view/{id}',[UserController::class,'profileview'])->name('profile.view');
     
 });
 
@@ -85,6 +88,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
        Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
 // Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
       Route::get('/houses/bookingList',[BackendRentList::class,'bookingList'])->name('houses.bookingList');
+      Route::get('/houses/booking/{id}',[BackendRentList::class,'bookinginfo'])->name('houses.bookingInfo');
       Route::get('/houses/bookingList/disapproved/{id}',[BackendRentList::class,'bookingdisapproved'])->name('houses.bookingList.disapproved');
 
 

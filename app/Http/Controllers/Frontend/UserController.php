@@ -79,9 +79,11 @@ class UserController extends Controller
         return redirect()->route('userlogin');
     }
 
-    public function profileview()
-    {
-        return view('frontend.layouts.profileView');
+    public function profileview($id)
+    { 
+        // dd($id);
+        $users=User::find($id);
+        return view('frontend.layouts.profileView',compact('users'));
     }
 
     

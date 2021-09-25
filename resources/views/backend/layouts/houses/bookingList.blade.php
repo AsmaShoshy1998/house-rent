@@ -58,7 +58,7 @@
   <th scope="row">{{$rent->description}}</th>
   <!-- <th scope="row">{{$rent->house_id}}</th> -->
   
-  
+  <td><a href="{{route('houses.bookingInfo',$rent->id)}}" class="btn btn-info">View</a></td>
   <td><a href="#"><i class='fas fa-check-double'></i></a> </td>
   <td><a href="{{route('houses.bookingList.disapproved',$rent->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this booking?');"  class="fas fa-times"></i></a> </td>
   

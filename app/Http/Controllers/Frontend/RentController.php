@@ -21,7 +21,7 @@ class RentController extends Controller
     {
         $rent = Rent::where('house_id',$request->id)->first();
         if($rent){
-            return redirect()->back()->with('success','already booked.'); 
+            return redirect()->back()->with('success','Already Booked.'); 
         }
         Rent::create([
             'full_name'=>$request->full_name,
