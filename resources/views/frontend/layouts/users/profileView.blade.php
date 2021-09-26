@@ -5,29 +5,20 @@
 @section('contents')
 
 
-
 <!--/ Intro Single star /-->
 <section class="intro-single">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">{{$users->full_name}}</h1>
-            <span class="color-text-a">Agent Immobiliari</span>
+            <h1 class="title-single">{{auth()->user()->full_name}}</h1>
+            
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#">Agents</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Margaret Stone
-              </li>
+             
             </ol>
           </nav>
         </div>
@@ -44,7 +35,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="agent-avatar-box">
-                <img src="{{url('/frontend/img/agent-7.jpg')}}" alt="" class="agent-avatar img-fluid">
+                <img src="{{url('uploads/'.auth()->user()->images)}}" alt="" class="agent-avatar img-fluid">
               </div>
             </div>
             
@@ -55,37 +46,36 @@
                   <div class="col-md-2">
                   <a class="btn btn-success" href="#" role="button"> <i class='fas fa-user-edit'></i> Edit Profile</a>
                     </div>
-                    <h3 class="title-d">Margaret Stone
-                      <br> Escala</h3>
+                    <h3 class="title-d">{{auth()->user()->full_name}} </h3>
                   </div>
                 </div>
                
                 <div class="agent-content mb-3">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
-                    Vivamus suscipit tortor
-                    eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.
-                  </p>
+                  
                   <div class="info-agents color-a">
+                  <p>
+                      <strong>Email: </strong>
+                      <span class="color-text-a"> {{auth()->user()->email}} </span>
+                    </p>
                     <p>
                       <strong>Phone: </strong>
-                      <span class="color-text-a"> +54 356 945234 </span>
+                      <span class="color-text-a"> {{auth()->user()->mobile_number}} </span>
                     </p>
                     <p>
-                      <strong>Mobile: </strong>
-                      <span class="color-text-a"> 999 123 456 789</span>
+                      <strong>NID Number: </strong>
+                      <span class="color-text-a">  {{auth()->user()->NID_Number}}</span>
                     </p>
                     <p>
-                      <strong>Email: </strong>
-                      <span class="color-text-a"> agents@example.com</span>
+                      <strong>Present Address: </strong>
+                      <span class="color-text-a"> {{auth()->user()->present_address}}</span>
                     </p>
                     <p>
-                      <strong>skype: </strong>
-                      <span class="color-text-a"> Margaret.Es</span>
+                      <strong>Parmanent Address: </strong>
+                      <span class="color-text-a"> {{auth()->user()->permanent_address}}</span>
                     </p>
                     <p>
-                      <strong>Email: </strong>
-                      <span class="color-text-a"> agents@example.com</span>
+                      <strong>Occupation: </strong>
+                      <span class="color-text-a"> {{auth()->user()->occupation}}</span>
                     </p>
                   </div>
                 </div>

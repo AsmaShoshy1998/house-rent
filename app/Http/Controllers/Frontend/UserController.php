@@ -55,7 +55,7 @@ class UserController extends Controller
     }
     public function login()
     {   
-    return view('frontend.layouts.userlogin');
+    return view('frontend.layouts.users.userlogin');
     }
 
 
@@ -79,11 +79,13 @@ class UserController extends Controller
         return redirect()->route('userlogin');
     }
 
-    public function profileview($id)
+    public function profileview()
     { 
-        // dd($id);
-        $users=User::find($id);
-        return view('frontend.layouts.profileView',compact('users'));
+        
+        // $id = auth()->user()->id;
+        // $users = user::where('id',$id)->get();
+        // dd($users);
+        return view('frontend.layouts.users.profileView');
     }
 
     

@@ -34,7 +34,8 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('houses.listall')}}">List All</a>
                                     <a class="nav-link" href="{{route('houses.bookingList')}}">Booking List</a>
-                                    <a class="nav-link" href="">List Vacant</a>
+                                    <a class="nav-link" href="">Approved List</a>
+                                    <a class="nav-link" href="">Disapproved List</a>
                                     
                                 </nav>
                             </div>

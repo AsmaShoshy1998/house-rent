@@ -23,15 +23,18 @@ class RentController extends Controller
         $users=User::all();
     return view('backend.layouts.houses.bookingInfoView',compact('rents','users','houses'));
     }
-    public function bookingdisapproved($id)
-       {
-       
-         $rents=rent::find($id);
-        if($rents)
-        {
-            $rents->delete();
-            return redirect()->back()->with('message','Booking Disapproved successfully.');
-        }
-        return redirect()->back()->with('message','No booking found to delete.');
-       }
+    public function approved($id)
+     {
+     Rent::find($id)->update([
+     'status'=>'Booked'
+     ]);
+     return redirect()->route('houses.bookingList')->with('message','Rent approved sucessfully'); 
+     }
+     public function  cancel($id)
+     {
+        Rent::find($id)->update([
+     'status'=>'disapproved'
+     ]);
+     return redirect()->route('houses.bookingList')->with('message','Rent cancel sucessfully'); 
+     }
 }

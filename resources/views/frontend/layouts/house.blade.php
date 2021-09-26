@@ -45,6 +45,7 @@
 
 
 @foreach($houses as $data)
+@if($data->status === "active")
 
     <div class="col-md-4">
     
@@ -93,6 +94,7 @@
           </div>
         </div>
     </div>
+    @endif
 @endforeach
 
 </div>

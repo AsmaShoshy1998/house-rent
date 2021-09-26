@@ -54,6 +54,7 @@
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i>{{auth()->user()->full_name}}</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{route('profile.view')}}">My Profile</a></li>
+                        <li><a class="dropdown-item" href="{{route('rent_details.view')}}">My Rent Details</a></li>
                         <li><a class="dropdown-item" href="{{route('user.logout')}}">Logout</a></li>
                     </ul>
 

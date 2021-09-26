@@ -61,7 +61,8 @@ Route::group(['prefix'=>'tenant','middleware'=>'authuser','role'],function (){
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
     Route::get('/renthouse/{id}',[RentController::class,'houserent'])->name('houserent');
 Route::post('/renthouse/store',[RentController::class,'houserentPost'])->name('houserent.post');
-Route::get('/userprofile/view/{id}',[UserController::class,'profileview'])->name('profile.view');
+Route::get('/userprofile/view/',[UserController::class,'profileview'])->name('profile.view');
+Route::get('/rent_details/view/',[RentController::class,'rent_details'])->name('rent_details.view');
     
 });
 
@@ -89,8 +90,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 // Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
       Route::get('/houses/bookingList',[BackendRentList::class,'bookingList'])->name('houses.bookingList');
       Route::get('/houses/booking/{id}',[BackendRentList::class,'bookinginfo'])->name('houses.bookingInfo');
-      Route::get('/houses/bookingList/disapproved/{id}',[BackendRentList::class,'bookingdisapproved'])->name('houses.bookingList.disapproved');
-
+      
+      Route::get('/houses/approved/{id}',[BackendRentList::class,'approved'])->name('houses.approved');
+      Route::get('/houses/cancel/{id}',[BackendRentList::class,'cancel'])->name('houses.cancel');
 
       Route::post('/houses/store',[HousesController::class,'housepost'])->name('house.store');
       Route::get('/houses/delete/{id}',[HousesController::class,'delete'])->name('houses.delete');

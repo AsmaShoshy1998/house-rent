@@ -5,14 +5,16 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\house;
+use App\Models\category;
 
 class HousesController extends Controller
 {
     
     public function listall()
     {
-        $houses= house::paginate('4');
-    return view('backend.layouts.houses.listall',compact('houses'));
+        $houses= house::with('category')->paginate('4');
+        $categories=Category::all();
+    return view('backend.layouts.houses.listall',compact('houses','categories'));
     }
     public function houseedit($id)
     {

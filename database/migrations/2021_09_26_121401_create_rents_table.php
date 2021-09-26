@@ -6,7 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateRentsTable extends Migration
 {
-    
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('rents', function (Blueprint $table) {
@@ -21,6 +25,7 @@ class CreateRentsTable extends Migration
             // $table->date('ending_time');
             $table->text('description');
             $table->integer('house_id');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

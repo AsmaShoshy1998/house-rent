@@ -15,4 +15,8 @@ class Rent extends Model
     {
         return $this->belongsto(User::class,'user_id','id');
 }
+public function house()
+    {
+        return $this->belongsto(House::class,'house_id','id');
+}
 }
