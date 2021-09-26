@@ -33,9 +33,9 @@
                             <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('houses.listall')}}">List All</a>
-                                    <a class="nav-link" href="{{route('houses.bookingList')}}">Booking List</a>
-                                    <a class="nav-link" href="">Approved List</a>
-                                    <a class="nav-link" href="">Disapproved List</a>
+                                    <a class="nav-link" href="{{route('houses.rentList')}}">Rent List</a>
+                                    <a class="nav-link" href="{{route('houses.approvedlist')}}">Approved List</a>
+                                    <a class="nav-link" href="{{route('houses.cancellist')}}">Disapproved List</a>
                                     
                                 </nav>
                             </div>
@@ -104,7 +104,7 @@
                             <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('houses.listall')}}">List All</a>
-                                    <a class="nav-link" href="{{route('houses.bookingList')}}">Booking List</a>
+                                    <a class="nav-link" href="{{route('houses.rentList')}}">Rent List</a>
                                     <a class="nav-link" href="">List Vacant</a>
                                     
                                 </nav>

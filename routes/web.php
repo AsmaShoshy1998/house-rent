@@ -88,11 +88,18 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
        Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
 // Route::get('/houses/listvacant',[HousesController::class,'listvacant'])->name('houses.listvacant');
-      Route::get('/houses/bookingList',[BackendRentList::class,'bookingList'])->name('houses.bookingList');
-      Route::get('/houses/booking/{id}',[BackendRentList::class,'bookinginfo'])->name('houses.bookingInfo');
+      Route::get('/houses/rentList',[BackendRentList::class,'rentList'])->name('houses.rentList');
+      Route::get('/houses/rent/{id}',[BackendRentList::class,'rentinfo'])->name('houses.rentInfo');
       
       Route::get('/houses/approved/{id}',[BackendRentList::class,'approved'])->name('houses.approved');
       Route::get('/houses/cancel/{id}',[BackendRentList::class,'cancel'])->name('houses.cancel');
+      Route::get('/houses/approvedlist',[BackendRentList::class,'approvedlist'])->name('houses.approvedlist');
+      Route::get('/houses/cancellist',[BackendRentList::class,'cancellist'])->name('houses.cancellist');
+
+
+
+
+
 
       Route::post('/houses/store',[HousesController::class,'housepost'])->name('house.store');
       Route::get('/houses/delete/{id}',[HousesController::class,'delete'])->name('houses.delete');

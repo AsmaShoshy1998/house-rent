@@ -31,10 +31,8 @@
     <br> </br>
     <br> </br>
     <br> </br>
-    <br> </br>
-    <br> </br>
-    <br> </br>
-    <br> </br>
+    
+    
 <h1>Rent a House</h1>
 
 
@@ -51,50 +49,48 @@
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">Full Name</span>
-<input  class="form-control" type="text" name="full_name" placeholder="Enter your name">
+<input  value="{{auth()->user()->full_name}}" class="form-control" type="text" name="name" placeholder="Enter your name">
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">Email</span>
-<input class="form-control" type="email" name="email" placeholder="Enter your email">
+<input value="{{auth()->user()->email}}" class="form-control" type="email" name="email" placeholder="Enter your email">
 </div>
 </div>
 </div>
+<div class="row">
+<div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">Phone No.</span>
-<input class="form-control" type="tel" name="phone_number" placeholder="Enter your phone number">
+<input value="{{auth()->user()->mobile_number}}" class="form-control" type="tel" name="phone_number" placeholder="Enter your phone number">
 </div>
+</div>
+<div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">Address</span>
-<input class="form-control" type="text" name="address" placeholder="Enter your phone number">
+<input value="{{auth()->user()->present_address}}" class="form-control" type="text" name="address" placeholder="Enter your phone number">
 </div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">House ID</span>
-<input value="{{$houses->id}}" class="form-control" type="number" name="id" placeholder="Enter your phone number">
+<input  value="{{$houses->id}}" class="form-control" type="text" name="house_id" placeholder="Enter your name">
 </div>
-<div class="text-light">
-<p> <h4>Booking by </h4></p>
 </div>
-<div class="col-sm-5">
+<div class="col-sm-6">
 <div class="form-group">
-<span class="form-label">Full Name</span>
-<select class="form-control" name="name" id="">
-                                @foreach($users as $data)
-                                <option >{{$data->full_name}}</option>
-                                @endforeach
-                            </select>
+<span class="form-label">House Address</span>
+<input value="{{$houses->address}}" class="form-control" type="text" name="house_address" placeholder="Enter your email">
 </div>
 </div>
-<div class="col-sm-5">
+</div>
+
 <div class="form-group">
-<span class="form-label">Email</span>
-<select class="form-control" name="email" id="">
-                                @foreach($users as $data)
-                                <option>{{$data->email}}</option>
-                                @endforeach
-                            </select>
-</div>
+<span class="form-label">House Type</span>
+<input value="{{$houses->house_type}}" class="form-control" type="text" name="house_type" placeholder="Enter your phone number">
 </div>
 <div class="form-group">
 <span class="form-label">For the Beginning Period</span>
