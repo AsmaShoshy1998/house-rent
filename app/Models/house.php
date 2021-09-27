@@ -17,4 +17,12 @@ class house extends Model
         // 1 to 1 not dependent = hasOne
         return $this->belongsTo(category::class);
     }
+    public function amenities()
+    {
+        //who->relation name->to whom
+        // 1 to  1 dependent =belongsTo
+        // 1 to 1 not dependent = hasOne
+        return $this->belongsTo(amenities::class);
+    }
+
 }

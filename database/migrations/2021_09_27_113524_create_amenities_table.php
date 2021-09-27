@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIncomes extends Migration
+class CreateAmenitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateIncomes extends Migration
      */
     public function up()
     {
-        Schema::create('incomes', function (Blueprint $table) {
+        Schema::create('amenities', function (Blueprint $table) {
             $table->id();
-            $table->integer('total_rent_collection');
-            $table->integer('total_placement_fee_collection');
-            $table->integer('conmany_revenue_on_placement');
-            $table->integer('conmany_revenue_on_rent');
-            $table->integer('amount');
+            $table->string('name');
+            $table->string('status')->default('active'); 
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateIncomes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('incomes');
+        Schema::dropIfExists('amenities');
     }
 }

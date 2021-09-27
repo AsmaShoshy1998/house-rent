@@ -9,7 +9,7 @@
       <button class="btn btn-danger" onclick="printDiv('printableArea')">
     <i class="fas fa-print"></i> Print
 </button> &nbsp; 
-     <p id="hide_me_"><a href="{{route('houses.bookingList')}}" class="btn btn-info" style="float:right"><i class="fas fa-backward"></i> Back</a> </p>
+     <p id="hide_me_"><a href="{{route('houses.rentList')}}" class="btn btn-info" style="float:right"><i class="fas fa-backward"></i> Back</a> </p>
 		</section>
 
 <div id="printableArea">

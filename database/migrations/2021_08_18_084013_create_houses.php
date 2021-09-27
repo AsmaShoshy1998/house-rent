@@ -20,6 +20,7 @@ class CreateHouses extends Migration
             // $table->interger('user_id');
             $table->string('house_owner');
             $table->integer('number_of_room');
+            $table->integer('amenities_id');
             $table->integer('number_of_toilet');
             $table->integer('number_of_belcony');
             $table->integer('rent');

@@ -24,6 +24,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-city"></i></div>
                                 Category
                             </a>
+                            <a class="nav-link" href="{{route('amenities.list')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-layer-group"></i></div>
+                              Amenities
+                            </a>
                             
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>

@@ -9,6 +9,7 @@ use App\Http\Controllers\Frontend\HouseController;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\AmenitiesController;
 use App\Http\Controllers\Backend\HousesController;
 use App\Http\Controllers\Backend\RentController as BackendRentList;
 use App\Http\Controllers\Backend\DepositeReportsController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Backend\PlacementFeesController;
 use App\Http\Controllers\Backend\IncomesController;
 use App\Http\Controllers\Backend\InvoicesController;
 use App\Http\Controllers\Backend\UserController as BackendUser;
+use App\Http\Controllers\Backend\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -84,6 +86,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
         Route::get('/categories/delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
         Route::get('/categories/edit/{id}',[CategoryController::class,'edit'])->name('categories.edit');
       Route::put('/categories/update/{id}',[CategoryController::class,'update'])->name('category.put');
+      Route::get('/amenities',[AmenitiesController::class,'amenities'])->name('amenities.list');
+        Route::post('/amenities/store',[AmenitiesController::class,'amenitiesstore'])->name('amenities.store');
 
 
        Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
@@ -131,8 +135,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
       Route::get('/users/edit/{id}',[BackendUser::class,'useredit'])->name('user.edit');
       Route::get('/users/delete/{id}',[BackendUser::class,'userdelete'])->name('user.delete');
       Route::get('/landlords',[BackendUser::class,'landlordList'])->name('landlords.list');
-
-
+    
           });
 //   Route::group(['prefix'=>'landlord','middleware'=>'landlord'],function (){
 

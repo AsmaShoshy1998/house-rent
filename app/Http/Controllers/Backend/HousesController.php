@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\house;
+use App\Models\Amenities;
 use App\Models\category;
 
 class HousesController extends Controller
@@ -12,10 +13,39 @@ class HousesController extends Controller
     
     public function listall()
     {
-        $houses= house::with('category')->paginate('4');
+        $amenities=Amenities::all();
+        $houses= house::with('category','amenities')->paginate('4');
         $categories=Category::all();
-    return view('backend.layouts.houses.listall',compact('houses','categories'));
+    return view('backend.layouts.houses.listall',compact('houses','categories','amenities'));
     }
+    public function housepost(Request $request)
+    {
+    
+         $fileName='';
+        if($request->hasFile('image'))
+        {
+           $file=$request->file('image');
+           $fileName=date('Ymdms').'.'.$file->getClientOriginalExtension();
+           $file->storeAs('/uploads',$fileName);
+
+        
+        }
+    House::create([
+        'house_type'=>$request->name,
+        'address'=>$request->address,
+        'house_owner'=>$request->house_owner,
+        'number_of_room'=>$request->number_of_rooms,
+        'number_of_toilet'=>$request->number_of_toilets,
+        'number_of_belcony'=>$request->number_of_belcony,
+        'amenities_id'=>$request->amenities_name,
+       'rent'=>$request->rent,
+       'description'=>$request->description,
+       'images'=>$fileName,
+      
+    
+       ]);
+       return redirect()->back();
+       }
     public function houseedit($id)
     {
         $houses=House::find($id);
@@ -35,9 +65,10 @@ class HousesController extends Controller
         }
         $houses->update([
             
-            'house_type'=>$request->house_type,
+            'house_type'=>$request->name,
             'address'=>$request->address,
             'house_owner'=>$request->house_owner,
+            'amenities_id'=>$request->amenities_name,
             'number_of_room'=>$request->number_of_rooms,
             'number_of_toilet'=>$request->number_of_toilets,
             'number_of_belcony'=>$request->number_of_belcony,
@@ -45,6 +76,7 @@ class HousesController extends Controller
              'description'=>$request->description,
              'images'=>$fileName,
              'status'=>$request->status,
+            
         ]);
 
         return redirect()->route('houses.listall')->with('message','product updated successfully.');
@@ -54,34 +86,7 @@ class HousesController extends Controller
     // return view('backend.layouts.houses.listvacant');
     // }
     
-    public function housepost(Request $request)
-    {
     
-         $fileName='';
-        if($request->hasFile('image'))
-        {
-           $file=$request->file('image');
-           $fileName=date('Ymdms').'.'.$file->getClientOriginalExtension();
-           $file->storeAs('/uploads',$fileName);
-
-        
-        }
-    House::create([
-        'id'=>$request->id,
-        'house_type'=>$request->house_type,
-        'address'=>$request->address,
-        'house_owner'=>$request->house_owner,
-        'number_of_room'=>$request->number_of_rooms,
-        'number_of_toilet'=>$request->number_of_toilets,
-        'number_of_belcony'=>$request->number_of_belcony,
-       'rent'=>$request->rent,
-       'description'=>$request->description,
-       'images'=>$fileName,
-       'status'=>$request->status,
-    
-       ]);
-       return redirect()->back();
-       }
        public function delete($id)
        {
         //  dd($house_id);

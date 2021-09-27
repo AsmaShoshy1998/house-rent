@@ -31,6 +31,7 @@
 <th>No. of Rooms</th>
 <th>No. of Toilets</th>
 <th>No. of Belcony</th>
+<th>Amenities Name</th>
 <th>Rent</th>
 <th>Status</th>
 <th>Action</th>
@@ -51,6 +52,8 @@
   <th scope="row">{{$house->number_of_room}}</th>
   <th scope="row">{{$house->number_of_toilet}}</th>
   <th scope="row">{{$house->number_of_belcony}}</th>
+  <th scope="row">{{$house->amenities_id}}</th>
+
   <th scope="row">{{$house->rent}}BDT</th>
   <th scope="row">{{$house->status}}</th>
   
@@ -123,6 +126,14 @@
     <label for="inputAddress2">Number of Belcony</label>
     <input type="number" class="form-control" min="0" name='number_of_belcony' id="inputAddress2" placeholder=" ">
   </div>
+  <div class="form-group">
+    <label for="inputAddress2">Amenities Name</label>
+    <select class="form-control" name="amenities_name" id="">
+                                @foreach($amenities as $data)
+                                <option value="{{$data->id}}">{{$data->name}}</option>
+                                @endforeach
+                            </select>
+  </div>
      
   <div class="form-row">
     
@@ -139,15 +150,9 @@
     </div>
     
   </div>
-  <div class="form-group">
-  <div class="form-row align-items-center">
-    <div class="col-auto my-1">
-      <label class="mr-sm-2" for="inputAddress2">Status</label>
-      <input type="text" class="form-control" name='status' id="inputAddress2" placeholder=" ">
-    </div>
-    </div>
+  
     
-    </div>
+    
     
     </div>
     

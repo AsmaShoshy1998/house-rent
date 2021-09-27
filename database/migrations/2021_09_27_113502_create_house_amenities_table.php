@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepositereports extends Migration
+class CreateHouseAmenitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateDepositereports extends Migration
      */
     public function up()
     {
-        Schema::create('depositereports', function (Blueprint $table) {
+        Schema::create('house_amenities', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name'); 
-            $table->integer('house_id'); 
-            $table->date('paid_on'); 
-            $table->string('apartment_owner'); 
-            $table->integer('amount');
+            $table->integer('house_id');
+            $table->integer('amenities_id');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateDepositereports extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('depositereports');
+        Schema::dropIfExists('house_amenities');
     }
 }

@@ -20,6 +20,9 @@ class RentController extends Controller
     public function houserentPost(Request $request)
     {
         $rent = Rent::where('house_id',$request->id)->first();
+        if($rent){
+            return redirect()->back()->with('success','Already Booked.'); 
+        }
         if(!$rent && auth()->user()->id !=1){
             Rent::create([
                 'user_id'=>auth()->user()->id,
@@ -39,9 +42,7 @@ class RentController extends Controller
         }else {
             return redirect()->back()->with('success','Admin cannot rent any house.');
         }
-        if($rent){
-            return redirect()->back()->with('success','Already Booked.'); 
-        }
+        
        
         Rent::create([
             'user_id'=>auth()->user()->id,
