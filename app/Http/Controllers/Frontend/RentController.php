@@ -35,6 +35,7 @@ class RentController extends Controller
                 'house_id'=>$request->house_id,
                 'house_address' =>$request->house_address,
                 'house_type' =>$request->house_type,
+                'house_rent' =>$request->house_rent,
            
                ]);
                return redirect()->back()->with('success','Rent Successfully.');
@@ -55,7 +56,7 @@ class RentController extends Controller
             'house_id'=>$request->id,
             'house_address' =>$request->house_address,
             'house_type' =>$request->house_type,
-           
+            'house_rent' =>$request->house_rent,
            ]);
         //    dd($request);
            return redirect()->back()->with('success','House Rent Successfully.');

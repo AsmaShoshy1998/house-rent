@@ -46,8 +46,8 @@
   <th scope="row">{{$amenity->status}}</th>
   
   
-  <td><a href=""><i class='fas fa-edit'></i></a></td>
-  <td> <a href=""> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a>  </td>
+  <td><a href="{{route('amenities.edit',$amenity->id)}}"><i class='fas fa-edit'></i></a>
+  <a href=""> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a>  </td>
 
 
   

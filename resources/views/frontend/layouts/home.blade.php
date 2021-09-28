@@ -154,6 +154,7 @@
                       <h4 class="card-info-title">Belcony</h4>
                       <span>{{$data->number_of_belcony}}</span>
                     </li>
+                   
                   </ul>
                 </div>
               </div>

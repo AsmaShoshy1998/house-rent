@@ -15,12 +15,12 @@ class CreateHouses extends Migration
     {
         Schema::create('houses', function (Blueprint $table) {
             $table->id();
-            $table->string('house_type');
+            $table->integer('category_id');
             $table->string('address');
             // $table->interger('user_id');
-            $table->string('house_owner');
+            $table->string('house_owner')->default('Ali Ahmed');
             $table->integer('number_of_room');
-            $table->integer('amenities_id');
+           
             $table->integer('number_of_toilet');
             $table->integer('number_of_belcony');
             $table->integer('rent');
@@ -29,10 +29,11 @@ class CreateHouses extends Migration
             $table->string('status', 10)->default('active');  
            
             $table->timestamps();
+
+
+
         });
     }
-    
-
 
     /**
      * Reverse the migrations.

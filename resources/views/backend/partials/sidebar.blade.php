@@ -44,33 +44,17 @@
                                 </nav>
                             </div>
                             
-                            <div class="collapse" id="collapseLayouts4" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{route('depositereports.alldeposites')}}">All Deposites</a>
-                                    <a class="nav-link" href="{{route('depositereports.sumbyapartments')}}">Sum by Apartments</a>
-                                    <a class="nav-link" href="{{route('depositereports.sortbyapartments')}}">Sort by Apartments</a>
-                                </nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts5" aria-expanded="false" aria-controls="collapseLayouts5">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Placement Fees
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts5" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{route('placementfees.viewbymonth')}}">View by Month</a>
-                                    <a class="nav-link" href="{{route('placementfees.viewbyapartments')}}">View by Apartments</a>
-                                </nav>
-                            </div>
+                         
+                            
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts6">
                                 <div class="sb-nav-link-icon"><i class="fab fa-speakap"></i></div>
-                                Incomes
+                                Payment
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts6" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{route('incomes.companyincome')}}">Company Income</a>
-                                    <a class="nav-link" href="{{route('incomes.landlordsincome')}}">Landlords Income</a>
+                                    <a class="nav-link" href="{{route('payment.list')}}">List</a>
+                                    <a class="nav-link" href="#">Landlords Income</a>
                                     
                                 </nav>
                             </div>
@@ -78,7 +62,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                                 Invoices
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="{{route('reports')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-layer-group"></i></div>
                               Report
                             </a>

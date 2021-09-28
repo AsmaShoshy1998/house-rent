@@ -88,18 +88,25 @@
 </div>
 </div>
 
+<div class="row">
+<div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">House Type</span>
-<input value="{{$houses->house_type}}" class="form-control" type="text" name="house_type" placeholder="Enter your phone number">
+<input value="{{$houses->category->category_name}}" class="form-control" type="text" name="house_type" placeholder="Enter your phone number">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<span class="form-label">House Rent</span>
+<input value="{{$houses->rent}}" class="form-control" type="text" name="house_rent" placeholder="Enter your phone number">
+</div>
+</div>
 </div>
 <div class="form-group">
 <span class="form-label">For the Beginning Period</span>
 <input class="form-control" type="date" name="beginning_period" placeholder="Enter ZIP/Location">
 </div>
-<!-- <div class="form-group">
-<span class="form-label">and Ending Period</span>
-<input class="form-control" type="date" name="ending_time" placeholder="Enter ZIP/Location">
-</div> -->
+
 <div class="form-group">
 <span class="form-label">Reason for Rent the House</span>
 <textarea type="text" id="description" name="reason" class="form-control" placeholder="Write a Reason" ></textarea>

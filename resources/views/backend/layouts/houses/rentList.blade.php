@@ -23,7 +23,7 @@
     @endif
 <table class="table">
 <thead class="thead-primary">
-<tr>
+<tr class="table-info">
 <th>ID</th>
 <th>Name</th>
 <th>Email</th>
@@ -55,11 +55,12 @@
   <th scope="row">{{$rent->description}}</th>
 
   <th scope="row">{{$rent->status}}</th>
+  <td><a class="btn btn-danger" href="{{route('payment.create',$rent->id)}}" role="button">  Payment</a>
   
-  <td><a href="{{route('houses.approved',$rent->id)}}"> <i class="fas fa-check-double"></i></a></td>
+  <a href="{{route('houses.approved',$rent->id)}}" > <i class="fas fa-check-double"></i></a>
  
-  <td><a href="{{route('houses.cancel',$rent->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this booking?');"  class="fas fa-times"></i></a> </td>
-  <td><a class="btn btn-success" href="{{route('houses.rentInfo',$rent->id)}}" role="button"> <i class='fas fa-file-invoice'></i> Invoice</a></td>
+  <a href="{{route('houses.cancel',$rent->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this booking?');"  class="fas fa-times"></i></a> 
+  <a class="btn btn-success" href="{{route('houses.rentInfo',$rent->id)}}" role="button"> <i class='fas fa-file-invoice'></i> Invoice</a></td>
   
 </tr>
 @endforeach
@@ -74,6 +75,10 @@
 </div>
 </div>
 </section>
+
+
+
+
 
 
 @endsection

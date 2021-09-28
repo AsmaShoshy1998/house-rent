@@ -42,7 +42,7 @@
 <tr>
 <th scope="row">{{$key+1}}
 
-<th scope="row">{{$house->house_type}}</th>
+<th scope="row">{{optional($house->category)->category_name}}</th>
   <th scope="row">{{$house->address}}</th>
   <th>
 <img src="{{url('/uploads/'.$house->images)}}" width="100px" alt="image">
@@ -52,12 +52,18 @@
   <th scope="row">{{$house->number_of_room}}</th>
   <th scope="row">{{$house->number_of_toilet}}</th>
   <th scope="row">{{$house->number_of_belcony}}</th>
-  <th scope="row">{{$house->amenities_id}}</th>
+
+  <th>
+            @foreach($house->HouseAmenities as $data)
+
+            <span class="badge alert-success">{{$data->Amenities->name}}</span>
+            @endforeach
+            </th>
 
   <th scope="row">{{$house->rent}}BDT</th>
   <th scope="row">{{$house->status}}</th>
   
-  <td><a href="{{route('houses.edit',$house->id)}}"><i class='fas fa-user-edit'></i></a> </td>
+  <td><a href="{{route('houses.edit',$house->id)}}"><i class='fas fa-edit'></i></a> </td>
   <td><a href="{{route('houses.delete',$house->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
 
 
@@ -91,8 +97,8 @@
 
           <div class="form-group">
 <div class="form-group">
-<label for="validationDefault01">House Type</label>
-<select class="form-control" name="name" id="">
+<label for="validationDefault01">Setect Category</label>
+<select class="form-control" name="category_name" id="">
                                 @foreach($categories as $data)
                                 <option value="{{$data->id}}">{{$data->category_name}}</option>
                                 @endforeach
@@ -109,10 +115,7 @@
     
     <br></br>
   </div>   
-    <div class="col-md-4 mb-3">
-    <label for="validationDefault02">House Owner</label>
-      <input type="text" class="form-control" name='house_owner' id="validationDefault02" placeholder="" value="" required>
-    </div>
+    
     <div class="col-md-4 mb-3">
     <label for="validationDefault02">Number of Rooms</label>
       <input type="number" class="form-control" min="0" name='number_of_rooms' id="validationDefault02" placeholder="" value="" required>
@@ -127,8 +130,8 @@
     <input type="number" class="form-control" min="0" name='number_of_belcony' id="inputAddress2" placeholder=" ">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Amenities Name</label>
-    <select class="form-control" name="amenities_name" id="">
+    <label for="inputAddress2">Select Amenities</label>
+    <select multiple="multiple" class="form-control" name="amenities_name[]" id="">
                                 @foreach($amenities as $data)
                                 <option value="{{$data->id}}">{{$data->name}}</option>
                                 @endforeach

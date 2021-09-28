@@ -25,6 +25,7 @@ class CreateRentsTable extends Migration
             $table->integer('house_id');
             $table->string('house_address');
             $table->string('house_type');
+            $table->integer('house_rent');
             $table->string('status')->default('pending');
             $table->timestamps();
         });

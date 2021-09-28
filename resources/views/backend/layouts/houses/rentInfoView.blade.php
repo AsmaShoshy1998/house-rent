@@ -35,18 +35,18 @@
           <div class="row invoice-info">
 		  <div class="col-sm-12"><h1>Information of the Tenant:</h1></div>
             <div class="col-sm-6 invoice-col">
-			  <p><b>Name of Tenant         :</b> {{$rents->full_name}}</p>
-			  <p><b>Tenant's Email         :</b> {{$rents->email}}</p>
-        <p><b>Tenant's Phone Number  :</b> {{$rents->phone_number}}</p>
-        <p><b>Tenant's Address       :</b> {{$rents->address}}</p>
-        <p><b>Beginning Period       :</b> {{$rents->beginning_time}}</p>
-        <p><b>Reason for Rent        :</b> {{$rents->description}}</p>
+			  <p><b>Name of Tenant         :</b> {{$rents->user_name}}</p>
+			  <p><b>Tenant's Email         :</b> {{$rents->user_email}}</p>
+        <p><b>Tenant's Phone Number  :</b> {{$rents->user_number}}</p>
+        <p><b>Tenant's Address       :</b> {{$rents->user_address}}</p>
+       
+      
 			  
             </div><!-- /.col -->
             <div class="col-sm-6 invoice-col">
-             <p><b>Booked by :</b> {{$rents->user_name}}</p>
-			  <p> <b>User Email :</b> {{$rents->user_email}}</p>
-			  <p><b>Number :</b> {{$rents->user_number}}</p>
+            <p><b>Beginning Period       :</b> {{$rents->beginning_time}}</p>
+            <p><b>Reason for Rent        :</b> {{$rents->description}}</p>
+			 
             </div><!-- /.col -->
           </div><!-- /.row -->
 
@@ -77,11 +77,16 @@
                     <th style="width:50%">Address:</th>
                     <td>{{$rents->house_address}}</td>
                   </tr>
-				  
-				  <tr>
-                    <th style="width:50%">House Rent:</th>
-                    <td>BDT 34000 </td>
+                  <tr>
+                    <th style="width:50%">Type:</th>
+                    <td>{{$rents->house_type}}</td>
                   </tr>
+                  <tr>
+                    <th style="width:50%">House Rent:</th>
+                    <td>{{$rents->house_rent}}</td>
+                  </tr>
+				  
+				  
 				  
                   
                 </table>

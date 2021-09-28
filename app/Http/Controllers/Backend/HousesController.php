@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\house;
 use App\Models\Amenities;
+use App\Models\HouseAmenities;
 use App\Models\category;
 
 class HousesController extends Controller
@@ -14,13 +15,13 @@ class HousesController extends Controller
     public function listall()
     {
         $amenities=Amenities::all();
-        $houses= house::with('category','amenities')->paginate('4');
+        $houses= house::with('category','HouseAmenities')->paginate('4');
         $categories=Category::all();
     return view('backend.layouts.houses.listall',compact('houses','categories','amenities'));
     }
     public function housepost(Request $request)
     {
-    
+    // dd($request->all());
          $fileName='';
         if($request->hasFile('image'))
         {
@@ -28,24 +29,29 @@ class HousesController extends Controller
            $fileName=date('Ymdms').'.'.$file->getClientOriginalExtension();
            $file->storeAs('/uploads',$fileName);
 
-        
         }
-    House::create([
-        'house_type'=>$request->name,
+        $houses=House::create([
+        'category_id'=>$request->category_name,
         'address'=>$request->address,
-        'house_owner'=>$request->house_owner,
         'number_of_room'=>$request->number_of_rooms,
         'number_of_toilet'=>$request->number_of_toilets,
         'number_of_belcony'=>$request->number_of_belcony,
-        'amenities_id'=>$request->amenities_name,
        'rent'=>$request->rent,
        'description'=>$request->description,
        'images'=>$fileName,
-      
-    
        ]);
+       
+       foreach($request->amenities_name as $am)
+      
+       {
+HouseAmenities::create([
+    'house_id'=>$houses->id,
+    'amenities_id'=>$am,
+]);
+       }
        return redirect()->back();
        }
+
     public function houseedit($id)
     {
         $houses=House::find($id);
@@ -65,10 +71,9 @@ class HousesController extends Controller
         }
         $houses->update([
             
-            'house_type'=>$request->name,
+            'category_id'=>$request->category_name,
             'address'=>$request->address,
             'house_owner'=>$request->house_owner,
-            'amenities_id'=>$request->amenities_name,
             'number_of_room'=>$request->number_of_rooms,
             'number_of_toilet'=>$request->number_of_toilets,
             'number_of_belcony'=>$request->number_of_belcony,
@@ -81,11 +86,6 @@ class HousesController extends Controller
 
         return redirect()->route('houses.listall')->with('message','product updated successfully.');
     }
-    // public function listvacant()
-    // {
-    // return view('backend.layouts.houses.listvacant');
-    // }
-    
     
        public function delete($id)
        {

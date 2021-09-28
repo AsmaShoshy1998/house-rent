@@ -7,7 +7,7 @@
 <button class="btn btn-danger" onclick="printDiv('printableArea')">
     <i class="fas fa-print"></i> Print
 </button>
-<form action="{{route('report.search')}}" method="get">
+<form action="{{route('reports')}}" method="get">
         @csrf
 <div class="row" style="padding-left: 300px;padding-top: 100px;">
 

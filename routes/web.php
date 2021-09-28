@@ -12,9 +12,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\AmenitiesController;
 use App\Http\Controllers\Backend\HousesController;
 use App\Http\Controllers\Backend\RentController as BackendRentList;
-use App\Http\Controllers\Backend\DepositeReportsController;
-use App\Http\Controllers\Backend\PlacementFeesController;
-use App\Http\Controllers\Backend\IncomesController;
+use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\Backend\InvoicesController;
 use App\Http\Controllers\Backend\UserController as BackendUser;
 use App\Http\Controllers\Backend\ReportController;
@@ -86,8 +84,14 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
         Route::get('/categories/delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
         Route::get('/categories/edit/{id}',[CategoryController::class,'edit'])->name('categories.edit');
       Route::put('/categories/update/{id}',[CategoryController::class,'update'])->name('category.put');
+
+
+
       Route::get('/amenities',[AmenitiesController::class,'amenities'])->name('amenities.list');
         Route::post('/amenities/store',[AmenitiesController::class,'amenitiesstore'])->name('amenities.store');
+        Route::get('/amenities/edit/{id}',[AmenitiesController::class,'edit'])->name('amenities.edit');
+      Route::put('/amenities/update/{id}',[AmenitiesController::class,'update'])->name('amenities.put');
+      Route::get('/amenities/delete/{id}',[AmenitiesController::class,'delete'])->name('amenities.delete');
 
 
        Route::get('/houses/listall',[HousesController::class,'listall'])->name('houses.listall');
@@ -111,14 +115,13 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
       Route::put('/houses/update/{id}',[HousesController::class,'update'])->name('houses.put');
 
 
-      Route::get('/depositereports/alldeposites',[DepositeReportsController::class,'alldeposites'])->name('depositereports.alldeposites');
-      Route::get('/depositereports/sortbyapartments',[DepositeReportsController::class,'sortbyapartments'])->name('depositereports.sortbyapartments');
-      Route::get('/depositereports/sumbyapartments',[DepositeReportsController::class,'sumbyapartments'])->name('depositereports.sumbyapartments');
+      Route::get('/payment/create/{id}',[PaymentController::class,'paymentcreate'])->name('payment.create');
+      Route::post('/payment/store',[PaymentController::class,'paymentstore'])->name('payment.store');
+      Route::get('/payment/list',[PaymentController::class,'paymentlist'])->name('payment.list');
+      Route::get('/payment/approved/{id}',[PaymentController::class,'approved'])->name('payment.confirm');
+      
 
-      Route::get('/placementfees/sortbyapartments',[PlacementFeesController::class,'viewbyapartments'])->name('placementfees.viewbyapartments');
-      Route::get('/placementfees/sumbyapartments',[PlacementFeesController::class,'viewbymonth'])->name('placementfees.viewbymonth');
 
-      Route::get('/incomes/landlordsincome',[IncomesController::class,'landlordsincome'])->name('incomes.landlordsincome');
       Route::get('/incomes/companyincome',[IncomesController::class,'companyincome'])->name('incomes.companyincome');
 
       Route::get('/invoices',[InvoicesController::class,'invoice'])->name('invoices.invoice');
@@ -134,7 +137,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
       Route::get('/users',[BackendUser::class,'userList'])->name('users.user');
       Route::get('/users/edit/{id}',[BackendUser::class,'useredit'])->name('user.edit');
       Route::get('/users/delete/{id}',[BackendUser::class,'userdelete'])->name('user.delete');
-      Route::get('/landlords',[BackendUser::class,'landlordList'])->name('landlords.list');
+      Route::get('/report',[ReportController::class,'reportsearch'])->name('reports');
     
           });
 //   Route::group(['prefix'=>'landlord','middleware'=>'landlord'],function (){

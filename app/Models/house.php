@@ -15,14 +15,14 @@ class house extends Model
         //who->relation name->to whom
         // 1 to  1 dependent =belongsTo
         // 1 to 1 not dependent = hasOne
-        return $this->belongsTo(category::class);
+        return $this->belongsTo(category::class,'category_id','id');
     }
-    public function amenities()
+    public function HouseAmenities()
     {
         //who->relation name->to whom
         // 1 to  1 dependent =belongsTo
         // 1 to 1 not dependent = hasOne
-        return $this->belongsTo(amenities::class);
+        return $this->hasMany(HouseAmenities::class);
     }
 
 }

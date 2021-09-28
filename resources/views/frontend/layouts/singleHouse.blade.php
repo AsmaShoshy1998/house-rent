@@ -79,7 +79,7 @@
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Type:</strong>
-                      <span>{{$houses->house_type}}</span>
+                      <span>{{optional($houses->category)->category_name}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Status:</strong>
@@ -96,6 +96,10 @@
                     <li class="d-flex justify-content-between">
                       <strong>Belcony</strong>
                       <span>{{$houses->number_of_belcony}}</span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Amenities</strong>
+                      <span>{{$houses->amenities_id}}</span>
                     </li>
                   </ul>
                 </div>
