@@ -53,6 +53,26 @@ class UserController extends Controller
     // dd($request);
     return redirect()->back()->with('success','User Registration Succeccfully.');
     }
+
+
+
+    public function update(Request $request)
+    {
+        $user=User::find(auth()->user()->id);
+$user->update([
+    'full_name'=>$request->name,
+    'NID_Number'=>$request->NID_Number,
+    'mobile_number'=>$request->Phone_Number,
+    'present_address'=>$request->Present_Address,
+    'permanent_address'=>$request->Permanent_Address,
+    'occupation'=>$request->Occupation,
+    'NID_Number'=>$request->NID_Number,
+   'email'=>$request->email,   
+]);
+return redirect()->back();
+    }
+    
+
     public function login()
     {   
     return view('frontend.layouts.users.userlogin');

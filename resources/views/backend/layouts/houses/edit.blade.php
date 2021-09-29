@@ -11,17 +11,14 @@
         @method('PUT')
 @csrf
 
-          <div class="form-group">
 <div class="form-group">
-<br></br>
-<label for="validationDefault01">House Type</label>
-<select value="{{$houses->house_type}}" class="custom-select mr-sm-2" name="house_type" id="inlineFormCustomSelect">
-        
-        <option >single house</option>
-        <option >apartment</option>
-        <option >vacation home</option>
-        
-      </select>
+<div class="form-group">
+<label for="validationDefault01">Setect Category</label>
+<select class="form-control" name="category_name" id="">
+                                @foreach($categories as $data)
+                                <option value="{{$data->id}}">{{$data->category_name}}</option>
+                                @endforeach
+                            </select>
     </div>
     <div class="col-md-4 mb-3">
     <label for="validationDefault02">Address</label>

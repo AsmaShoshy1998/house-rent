@@ -98,11 +98,7 @@
                             <textarea name="details"  id="details" class="form-control" placeholder="Enter Category Details" ></textarea>
                         </div>
 
-                        <div class="form-group">
-                            <label for="product_name">Status</label>
-                            <input type="text" class="form-control" id="status" name="status">
-                                                  
-                        </div>
+                        
 
 
                     </div>

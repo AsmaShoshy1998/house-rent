@@ -54,13 +54,14 @@ HouseAmenities::create([
 
     public function houseedit($id)
     {
+        $categories=Category::all();
         $houses=House::find($id);
         // dd($houses);
-        return view('backend.layouts.houses.edit',compact('houses'));
+        return view('backend.layouts.houses.edit',compact('houses','categories'));
     }
     public function update(Request $request,$id)
     {
-//        dd($request->all());
+        
         $houses=House::find($id);
         $fileName='';
         if($request->hasFile('image'))
@@ -84,7 +85,7 @@ HouseAmenities::create([
             
         ]);
 
-        return redirect()->route('houses.listall')->with('message','product updated successfully.');
+        return redirect()->route('houses.listall')->with('message','House updated successfully.');
     }
     
        public function delete($id)
@@ -94,9 +95,9 @@ HouseAmenities::create([
         if($houses)
         {
             $houses->delete();
-            return redirect()->back()->with('message','Product Deleted successfully.');
+            return redirect()->back()->with('message','House Deleted successfully.');
         }
-        return redirect()->back()->with('message','No product found to delete.');
+        return redirect()->back()->with('message','No house found to delete.');
        }
 }
 

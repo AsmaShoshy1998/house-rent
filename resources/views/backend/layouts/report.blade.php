@@ -7,15 +7,18 @@
 <button class="btn btn-danger" onclick="printDiv('printableArea')">
     <i class="fas fa-print"></i> Print
 </button>
-<form action="{{route('reports')}}" method="get">
+<form action="{{route('reports.store')}}" method="post">
         @csrf
 <div class="row" style="padding-left: 300px;padding-top: 100px;">
 
     <div class="col-md-4">
-        <input name="from_date" type="date" class="form-control">
+        <input name="date" type="date" class="form-control">
     </div>
     <div class="col-md-4">
-        <button class="btn btn-primary">Search</button>
+        <input name="date1" type="date" class="form-control">
+    </div>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-primary">Search</button>
     </div>
 
 </div>
@@ -56,7 +59,7 @@
 </tr>
 </thead>
 <tbody>
-@foreach($rents as $key=>$rent)
+@foreach($report as $key=>$rent)
 <tr>
 <th scope="row">{{$key+1}}
 

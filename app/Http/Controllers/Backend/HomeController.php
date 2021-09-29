@@ -12,6 +12,6 @@ class HomeController extends Controller
     {
        
 
-return view('backend.layouts.homes.home');
+      return view('backend.layouts.homes.home');
     }
 }

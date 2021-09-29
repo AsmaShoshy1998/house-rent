@@ -18,7 +18,7 @@ class CategoryController extends Controller
         Category::create([
             'category_name'=>$request->name,
             'details'=>$request->details,
-            'status'=>$request->status,
+           
         ]);
 
         return redirect()->route('categories.list');
@@ -31,9 +31,9 @@ class CategoryController extends Controller
         if($categories)
         {
             $categories->delete();
-            return redirect()->back()->with('message','Product Deleted successfully.');
+            return redirect()->back()->with('message','Category Deleted successfully.');
         }
-        return redirect()->back()->with('message','No product found to delete.');
+        return redirect()->back()->with('message','No category found to delete.');
        }
        public function edit($id)
     {
@@ -55,7 +55,7 @@ $categories->update([
             
         ]);
 
-        return redirect()->route('categories.list')->with('message','product updated successfully.');
+        return redirect()->route('categories.list')->with('message','Category updated successfully.');
     }
     
       

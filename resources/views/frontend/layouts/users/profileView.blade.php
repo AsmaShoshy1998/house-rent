@@ -44,7 +44,8 @@
                 <div class="agent-title">
                   <div class="title-box-d">
                   <div class="col-md-2">
-                  <a class="btn btn-success" href="#" role="button"> <i class='fas fa-user-edit'></i> Edit Profile</a>
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> <i class='fas fa-user-edit'></i> Edit Profile</button>
+                 
                     </div>
                     <h3 class="title-d">{{auth()->user()->full_name}} </h3>
                   </div>
@@ -112,6 +113,72 @@
             </div>
           </div>
         </div>
+
+
+
+<!-- Modal -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{{route('user.put')}}" method="post">
+        @method('PUT')
+        @csrf
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input value="{{auth()->user()->full_name}}" required type="text" class="form-control" name="name" id="name" >
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input value="{{auth()->user()->email}} " required type="email" class="form-control" name="email" id="email" >
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Phone Number:</label>
+            <input value="{{auth()->user()->mobile_number}}" required type="number" class="form-control" name="Phone Number" id="name" >
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">NID Number:</label>
+            <input value="{{auth()->user()->NID_Number}}" required type="number" class="form-control" name="NID Number" id="name" >
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Present Address:</label>
+            <input value="{{auth()->user()->present_address}}" required type="text" class="form-control" name="Present Address" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Parmanent Address:</label>
+            <input value="{{auth()->user()->permanent_address}}" required type="text" class="form-control" name="Permanent Address" id="name" >
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Occupation:</label>
+            <select value="{{auth()->user()->full_name}}" required class="custom-select mr-sm-2" name="Occupation" id="inlineFormCustomSelect">
+        <option selected>{{auth()->user()->occupation}}</option>
+        <option >Engineer</option>
+        <option >Doctor</option>
+        <option >Banker</option>
+        <option >Teacher</option>
+        <option >Businessman</option>
+        <option >Politicians</option>
+      </select>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Password:</label>
+            <input value="{{auth()->user()->password}}" required type="password" class="form-control" name="password" id="name">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 
 

@@ -42,7 +42,7 @@
 
          <!-- <input style="width: 250px;" type="text" placeholder="Search" name="search" class="form-control"> -->
          <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search for..." />
+                    <input class="form-control" type="text" placeholder="Search for Location" name="search" aria-label="Search for..." />
                     <button class="btn btn-radient-danger" id="btnNavbarSearch" type="submit"><i class="fas fa-search"></i></button>
                 </div>
          </form>    

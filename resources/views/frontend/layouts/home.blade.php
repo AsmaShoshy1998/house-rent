@@ -24,10 +24,10 @@
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
-                <span class="fa fa-gamepad"></span>
+                <span class="fas fa-unlock-alt"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="text-dark"><b>Lifestyle</b></h2>
+                <h2 class="text-dark"><b>Security</b></h2>
               </div>
             </div>
             <div class="card-body-c">
@@ -38,9 +38,7 @@
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
+             
             </div>
           </div>
         </div>
@@ -48,10 +46,10 @@
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
-                <span class="fas fa-dollar-sign"></span>
+                <span class="fa fa-gamepad"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="text-dark"><b>Loans</b></h2>
+                <h2 class="text-dark"><b>Play area</b></h2>
               </div>
             </div>
             <div class="card-body-c">
@@ -62,9 +60,7 @@
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -72,10 +68,10 @@
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
-                <span class="fa fa-home"></span>
+                <span class="fa fa-car"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="text-dark"><b>Sell</b></h2>
+                <h2 class="text-dark"><b>Parking facilities</b></h2>
               </div>
             </div>
             <div class="card-body-c">
@@ -86,9 +82,7 @@
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -116,6 +110,7 @@
 
 
 @foreach($houses as $data)
+@if($data->status === "active")
     <div class="col-md-4">
     <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
@@ -162,6 +157,7 @@
           </div>
         </div>
     </div>
+    @endif
 @endforeach
 
 

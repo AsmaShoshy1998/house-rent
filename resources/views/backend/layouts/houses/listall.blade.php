@@ -28,9 +28,9 @@
 <th>Address</th>
 <th>Image</th>
 <th>Owner</th>
-<th>No. of Rooms</th>
-<th>No. of Toilets</th>
-<th>No. of Belcony</th>
+<th>Rooms</th>
+<th>Toilets</th>
+<th>Belcony</th>
 <th>Amenities Name</th>
 <th>Rent</th>
 <th>Status</th>
@@ -82,7 +82,7 @@
 </div>
 </section>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="hidden, modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

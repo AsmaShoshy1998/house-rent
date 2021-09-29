@@ -1,50 +1,28 @@
-/           @extends('backend.master')
+       @extends('backend.master')
 
 
            @section('content')
 
 <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body"> <h4>Total Tenants</h4></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="{{route('tenants.list')}}">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body"><h4>Total Houses</h4></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body"><h4>Managed Properties</h4></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body"><h4>House Units</h4></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="text-center">
+                        <div class="row" style="margin-top: 100px;">
+                        
+        <div class="col-md-3" style="background-color:Tomato; padding: 10px; margin-right: 10px">
+            <h3>Total Rents</h3>
+            <p><h4>{{$rent_count}}</h4></p>
+        </div>
+        <div class="col-md-3" style="background-color:Teal; padding: 10px; margin-right: 10px">
+            <h3>Total Users</h3>
+            <p><h4>{{$user_count}}</h4></p>
+        </div>
+        <div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+           <h3>Total Houses</h3>
+            <p><h4>{{$house_count}}</h4></p>
+        </div>
+</div>
+
+    </div>
+                        <br> </br>
                         
                         <div class="card mb-4">
                             <div class="card-header">

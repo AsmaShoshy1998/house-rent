@@ -5,17 +5,23 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Rent;
-use App\Models\user;
+use App\Models\Report;
 
 class ReportController extends Controller
 {
     
-    public function reportsearch()
+    public function report()
     {
-        $key=request()->search;
-        $rents=Rent::where('beginning_time','LIKE',"%{$key}%")->get();
-        return view('backend.layouts.report', compact('rents'));
+        $report=Rent::all();
+        return view('backend.layouts.report', compact('report'));
 
     }
+    public function reportstore(Request $request)
+    {
+        $report=Rent::whereBetween('created_at',[$request->date,$request->date1])->get();
+        return view('backend.layouts.report', compact('report'));
+
+    }
+    
     }
 

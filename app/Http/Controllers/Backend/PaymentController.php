@@ -24,8 +24,9 @@ class PaymentController extends Controller
         Payment::create([
             'rent_id'=>$request->rent_id,
             'amount'=>$request->Amount,
-            'user_id'=>auth()->user()->id,
+            'user_id'=>$request->user_id,
             'pay_at'=>$request->date,
+            'month'=>$request->month,
         ]);
 
         return redirect()->route('payment.list');

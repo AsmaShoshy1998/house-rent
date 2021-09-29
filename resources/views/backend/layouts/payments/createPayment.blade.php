@@ -22,6 +22,24 @@
             <label for="message-text" class="col-form-label">User ID:</label>
             <input value="{{$rents->user_id}}" type="number" name="user_id" class="form-control" id="recipient-name">
           </div>
+          <div class="col-md-4">
+            <label for="message-text" class="col-form-label">Month:</label>
+            <select required class="custom-select mr-sm-2" name="month" id="inlineFormCustomSelect">
+        <option selected>Choose...</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+          </div>
           
           <div class="col-md-3">
             <label for="message-text" class="col-form-label">Pay at:</label>

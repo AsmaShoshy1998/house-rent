@@ -25,7 +25,7 @@
                                 Category
                             </a>
                             <a class="nav-link" href="{{route('amenities.list')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-baby-carriage"></i></div>
                               Amenities
                             </a>
                             
@@ -39,7 +39,7 @@
                                     <a class="nav-link" href="{{route('houses.listall')}}">List All</a>
                                     <a class="nav-link" href="{{route('houses.rentList')}}">Rent List</a>
                                     <a class="nav-link" href="{{route('houses.approvedlist')}}">Approved List</a>
-                                    <a class="nav-link" href="{{route('houses.cancellist')}}">Disapproved List</a>
+                                    <a class="nav-link" href="{{route('houses.cancellist')}}">Cancel List</a>
                                     
                                 </nav>
                             </div>
@@ -69,8 +69,6 @@
                             
 
                             @endif
-
-
 
                             @if(auth()->user()->role=='landlord')
                             <a class="nav-link" href="">

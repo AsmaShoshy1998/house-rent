@@ -86,7 +86,7 @@
                       <span>{{$houses->status}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Beds:</strong>
+                      <strong>Rooms:</strong>
                       <span>{{$houses->number_of_room}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
@@ -94,12 +94,14 @@
                       <span>{{$houses->number_of_toilet}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Belcony</strong>
+                      <strong>Belconies</strong>
                       <span>{{$houses->number_of_belcony}}</span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Amenities</strong>
-                      <span>{{$houses->amenities_id}}</span>
+                      <strong>Amenities:</strong>
+                      @foreach($houses->HouseAmenities as $data)
+                      <span>{{$data->Amenities->name}}</span>
+                      @endforeach
                     </li>
                   </ul>
                 </div>

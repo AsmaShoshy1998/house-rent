@@ -33,7 +33,7 @@ class RentController extends Controller
      public function  cancel($id)
      {
         Rent::find($id)->update([
-     'status'=>'disapproved'
+     'status'=>'Cancel'
      ]);
      return redirect()->route('houses.rentList')->with('message','Rent cancel sucessfully'); 
      }
@@ -45,7 +45,7 @@ class RentController extends Controller
     public function cancellist()
     {
           $request=Rent::with('House')
-          ->where('status','disapproved')->get();
+          ->where('status','Cancel')->get();
          return view('backend.layouts.houses.cancellist',compact('request'));
     }
 }

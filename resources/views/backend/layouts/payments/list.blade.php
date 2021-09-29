@@ -21,7 +21,8 @@
 <th>Payment Type</th>
 <th>Amount</th>
 <th>User ID</th>
-<th>Pay at</th>
+<th>Month</th>
+<th>Payment Date</th>
 <th>Status</th>
 <th>Action</th>
       </tr>
@@ -36,6 +37,7 @@
   <th scope="row">{{$pay->payment_type}}</th>
   <th scope="row">{{$pay->amount}}</th>
   <th scope="row">{{$pay->user_id}}</th>
+  <th scope="row">{{$pay->month}}</th>
   <th scope="row">{{$pay->pay_at}}</th>
   
 

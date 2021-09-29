@@ -63,6 +63,7 @@ Route::group(['prefix'=>'tenant','middleware'=>'authuser','role'],function (){
 Route::post('/renthouse/store',[RentController::class,'houserentPost'])->name('houserent.post');
 Route::get('/userprofile/view/',[UserController::class,'profileview'])->name('profile.view');
 Route::get('/rent_details/view/',[RentController::class,'rent_details'])->name('rent_details.view');
+Route::put('/update',[UserController::class,'update'])->name('user.put');
     
 });
 
@@ -137,7 +138,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
       Route::get('/users',[BackendUser::class,'userList'])->name('users.user');
       Route::get('/users/edit/{id}',[BackendUser::class,'useredit'])->name('user.edit');
       Route::get('/users/delete/{id}',[BackendUser::class,'userdelete'])->name('user.delete');
-      Route::get('/report',[ReportController::class,'reportsearch'])->name('reports');
+      Route::get('/report',[ReportController::class,'report'])->name('reports');
+      Route::post('/report/store',[ReportController::class,'reportstore'])->name('reports.store');
     
           });
 //   Route::group(['prefix'=>'landlord','middleware'=>'landlord'],function (){
