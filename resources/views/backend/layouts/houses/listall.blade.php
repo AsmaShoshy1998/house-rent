@@ -104,7 +104,7 @@
                                 @endforeach
                             </select>
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6">
     <label for="validationDefault02">Address</label>
       <input type="text" class="form-control" name='address' id="validationDefault02" placeholder="" value=" " required>
     </div>
@@ -129,13 +129,16 @@
     <label for="inputAddress2">Number of Belcony</label>
     <input type="number" class="form-control" min="0" name='number_of_belcony' id="inputAddress2" placeholder=" ">
   </div>
+  <div class="col-md-30">
   <div class="form-group">
+  
     <label for="inputAddress2">Select Amenities</label>
     <select multiple="multiple" class="form-control" name="amenities_name[]" id="">
                                 @foreach($amenities as $data)
                                 <option value="{{$data->id}}">{{$data->name}}</option>
                                 @endforeach
                             </select>
+  </div>
   </div>
      
   <div class="form-row">
@@ -147,12 +150,14 @@
       <input type="number" class="form-control" min="0" name='rent' id="inputAddress2" placeholder=" ">
     </div>
     <p> </p>
+    <div class="col-md-30">
     <div class="form-group">
      <label for="description">Description</label>
      <textarea name="description" id="description" class="form-control" placeholder="Enter House description" ></textarea>
     </div>
     
-  </div>
+  
+    </div>
   
     
     

@@ -54,7 +54,7 @@
                             <div class="collapse" id="collapseLayouts6" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('payment.list')}}">List</a>
-                                    <a class="nav-link" href="#">Landlords Income</a>
+                                    <!-- <a class="nav-link" href="#">Landlords Income</a> -->
                                     
                                 </nav>
                             </div>

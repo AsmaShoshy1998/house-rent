@@ -9,7 +9,7 @@
 </button>
 <form action="{{route('reports.store')}}" method="post">
         @csrf
-<div class="row" style="padding-left: 300px;padding-top: 100px;">
+<div class="row" style="padding-left: 300px;padding-top: 20px;">
 
     <div class="col-md-4">
         <input name="date" type="date" class="form-control">

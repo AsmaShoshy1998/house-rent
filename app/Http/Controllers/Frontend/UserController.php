@@ -67,7 +67,8 @@ $user->update([
     'permanent_address'=>$request->Permanent_Address,
     'occupation'=>$request->Occupation,
     'NID_Number'=>$request->NID_Number,
-   'email'=>$request->email,   
+   'email'=>$request->email, 
+   'password'=>bcrypt($request->password),  
 ]);
 return redirect()->back();
     }

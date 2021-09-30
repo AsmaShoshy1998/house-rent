@@ -22,7 +22,7 @@ class UserController extends Controller
         if (Auth::attempt($shoshy)) 
         {
         //    dd(auth()->user());
-        if(auth()->user()->role=='admin' || auth()->user()->role=='landlord')
+        if(auth()->user()->role=='admin')
         {
             return redirect()->route('dashboard.dash');
             
