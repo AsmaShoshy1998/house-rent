@@ -10,7 +10,8 @@ class PaymentController extends Controller
 {
     public function paymentlist()
     {
-        $payments=Payment::all();
+        $payments=Payment::with('Rent')->get();
+        
     return view('backend.layouts.payments.list',compact('payments'));
     }
     public function  paymentcreate($id)
@@ -25,6 +26,7 @@ class PaymentController extends Controller
             'rent_id'=>$request->rent_id,
             'amount'=>$request->Amount,
             'user_id'=>$request->user_id,
+            'user_name'=>$request->user_name,
             'pay_at'=>$request->date,
             'month'=>$request->month,
         ]);

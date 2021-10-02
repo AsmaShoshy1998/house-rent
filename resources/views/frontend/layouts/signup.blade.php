@@ -75,7 +75,7 @@ body {
  <label for="number" class="cols-sm-2 control-label">NID Number</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input required type="number" class="form-control" name="NID Number" id="name" placeholder="Enter your NID Number">
+<input required type="number" class="form-control" name="NID Number" id="name" placeholder="Enter your NID Number" required>
 </div>
 </div>
 </div>

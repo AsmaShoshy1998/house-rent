@@ -16,7 +16,11 @@
 <label for="validationDefault01">Setect Category</label>
 <select class="form-control" name="category_name" id="">
                                 @foreach($categories as $data)
-                                <option value="{{$data->id}}">{{$data->category_name}}</option>
+                                <option 
+                                @if($houses->category_id==$data->id)
+                            selected
+                            @endif
+                                value="{{$data->id}}">{{$data->category_name}}</option>
                                 @endforeach
                             </select>
     </div>
@@ -25,16 +29,13 @@
       <input value="{{$houses->address}}" type="text" class="form-control" name='address' id="validationDefault02" placeholder="" value=" " required>
     </div>
     <div class="form-group">
-    <label for="exampleFormControlFile1">Image</label>
-    <div class="custom-file">
-    <input value="{{$houses->images}}" type="file" class="form-control" name='image' >
     
-    <br></br>
+    <div class="custom-file">
+    
+    
+ 
   </div>
-    <div class="col-md-4 mb-3">
-    <label for="validationDefault02">House Owner</label>
-      <input value="{{$houses->house_owner}}" type="text" class="form-control" name='house_owner' id="validationDefault02" placeholder="" value="" required>
-    </div>
+    
     <div class="col-md-4 mb-3">
     <label for="validationDefault02">Number of Rooms</label>
       <input value="{{$houses->number_of_room}}" type="number" class="form-control" name='number_of_rooms' id="validationDefault02" placeholder="" value="" required>
@@ -67,7 +68,14 @@
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inputAddress2">Status</label>
-      <input value="{{$houses->status}}"type="text" class="form-control" name='status' id="inputAddress2" placeholder=" ">
+      <select  type="text" required class="custom-select mr-sm-2" name='status'  id="inlineFormCustomSelect">
+      <option 
+           selected
+           value="{{$houses->status}}">{{$houses->status}}</option>
+
+        <option>active</option>
+       
+      </select>
     </div>
     </div>
     

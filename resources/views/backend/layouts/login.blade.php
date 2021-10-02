@@ -152,7 +152,7 @@ margin-left: 4px;
 			</div>
 			
 				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
+					
 				</div>
 			</div>
 		</div>

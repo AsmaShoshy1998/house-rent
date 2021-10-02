@@ -62,22 +62,6 @@ class UserController extends Controller
         $tenants=user::find($id);
            return view('backend.layouts.tenants.viewTenant',compact('tenants'));
        }
-    public function tenantedit($id)
-       {
-           return view('backend.layouts.tenants.edit');
-       }
-    public function tenantdelete($id)
-       {
-       
-         $tenants=user::find($id);
-        if($tenants)
-        {
-            $tenants->delete();
-            return redirect()->back()->with('message','Product Deleted successfully.');
-        }
-        return redirect()->back()->with('message','No product found to delete.');
-       }
-    
        
     
     public function userList()
@@ -87,25 +71,5 @@ class UserController extends Controller
         
         return view('backend.layouts.users.user', compact('users'));
     }
-    // public function userview($id)
-    //    {
-    //     $users=user::find($id);
-    //        return view('backend.layouts.users.viewUser',compact('users'));
-    //    }
-    public function useredit()
-    {
-        return view('backend.layouts.user.edit');
-    }
-    public function userdelete($id)
-       {
-       
-         $users=user::find($id);
-        if($users)
-        {
-            $users->delete();
-            return redirect()->back()->with('message','Product Deleted successfully.');
-        }
-        return redirect()->back()->with('message','No product found to delete.');
-       }
        
 }

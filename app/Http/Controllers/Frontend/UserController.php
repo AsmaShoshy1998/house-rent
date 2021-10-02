@@ -27,7 +27,7 @@ class UserController extends Controller
         }
         $request->validate([
             'name' => 'required|max:255',
-            'NID_Number' => 'required',
+            'NID_Number' => 'required|max:13',
             'Phone_Number' => 'required',
             'Present_Address' => 'required',
             'Permanent_Address' => 'required',
@@ -51,7 +51,7 @@ class UserController extends Controller
         'role'=>'tenant',
     ]);
     // dd($request);
-    return redirect()->back()->with('success','User Registration Succeccfully.');
+    return redirect()->route('userlogin')->with('success','User Registration Successfully.');
     }
 
 

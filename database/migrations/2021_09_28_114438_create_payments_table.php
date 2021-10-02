@@ -19,6 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->string('payment_type')->default('cash');
             $table->integer('amount');
             $table->integer('user_id');
+            $table->string('user_name');
             $table->string('pay_at');
             $table->string('month');
             $table->string('status')->default('pending');

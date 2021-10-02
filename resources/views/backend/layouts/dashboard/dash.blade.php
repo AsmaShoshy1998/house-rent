@@ -19,6 +19,31 @@
     <h3>Total Houses</h3>
     <p><h4>{{$house_count}}</h4></p>
 </div>
+<div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+    <h3>Total Houses</h3>
+    <p><h4>{{$house_count}}</h4></p>
+</div>
+<div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+    <h3>Total Houses</h3>
+    <p><h4>{{$house_count}}</h4></p>
+</div>
+<div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+    <h3>Total Houses</h3>
+    <p><h4>{{$house_count}}</h4></p>
+</div>
+<div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+    <h3>Total Houses</h3>
+    <p><h4>{{$house_count}}</h4></p>
+</div>
+<div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+    <h3>Total Houses</h3>
+    <p><h4>{{$house_count}}</h4></p>
+</div>
+<div class="col-md-3" style="background-color: Pink; padding: 10px; margin-right: 10px;">
+    <h3>Total Houses</h3>
+    <p><h4>{{$house_count}}</h4></p>
+</div>
+
 </div>
 </div>
                         

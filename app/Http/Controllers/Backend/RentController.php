@@ -6,15 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Models\Rent;
 use App\Models\house;
 use App\Models\user;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
 class RentController extends Controller
 {
     public function rentList()
     {
-        $rents= rent::paginate('5');
+        $rents= rent::with('users','payment')->paginate('5');
         $users=User::all();
-    return view('backend.layouts.houses.rentList',compact('rents','users'));
+        $payments=Payment::all();
+    return view('backend.layouts.houses.rentList',compact('rents','users','payments'));
     }
     public function rentinfo($id)
     {

@@ -74,13 +74,13 @@ HouseAmenities::create([
             
             'category_id'=>$request->category_name,
             'address'=>$request->address,
-            'house_owner'=>$request->house_owner,
+           
             'number_of_room'=>$request->number_of_rooms,
             'number_of_toilet'=>$request->number_of_toilets,
             'number_of_belcony'=>$request->number_of_belcony,
              'rent'=>$request->rent,
              'description'=>$request->description,
-             'images'=>$fileName,
+           
              'status'=>$request->status,
             
         ]);

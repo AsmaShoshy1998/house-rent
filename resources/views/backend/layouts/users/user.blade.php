@@ -26,7 +26,7 @@
 <th scope="col">Email</th>
 <th scope="col">Status</th>
 
-<th scope="col">Action</th>
+
     </tr>
   </thead>
   <tbody>
@@ -48,9 +48,6 @@
 <td scope="row">{{$user->email}}</td>
 <td scope="row">{{$user->status}}</td>
 
-
-<td><a href="#"><i class='fas fa-check-double'></i></a> </td>
-  <td><a href="{{route('user.delete',$user->id)}}"> <i onclick="return confirm('Are you sure you want to disapprove this user?');"  class="fas fa-times"></i></a> </td>
 
 </tr>
 @endforeach

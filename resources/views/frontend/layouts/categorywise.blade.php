@@ -5,7 +5,7 @@
 @section('contents')
 
 
-@include('frontend.partials.slider')
+<!-- @include('frontend.partials.slider') -->
 
 <!--/ Services Star /-->
 <section class="section-services section-t8">
@@ -86,7 +86,7 @@
   <!--/ Services End /-->
 
   <!--/ Property Star /-->
-<div class="container" style="margin-top: 2rem; text-align:center; padding-left:11rem; padding-right: 12rem;">
+  <div class="container" style="margin-top: 2rem; text-align:center; padding-left:11rem; padding-right: 12rem;">
   <div class="col-lg-12">
   <div class="row">
 @foreach($category as $cat)
@@ -121,28 +121,28 @@
       <div class="row">
 
 
-@foreach($houses as $data)
-@if($data->status === "active")
+      @foreach($categoryWiseHouse as $house)
+@if($house->status === "active")
     <div class="col-md-4">
     <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-            <p class="best_text">{{$data->name}} </p>
-            <img width="400px" src="{{url('uploads/'.$data->images)}}" alt="" class="img-a img-fluid">
+            <p class="best_text">{{$house->name}} </p>
+            <img width="400px" src="{{url('uploads/'.$house->images)}}" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="">{{$data->address}}
+                    <a href="">{{$house->address}}
                       <br /> </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | {{$data->rent}}.BDT</span>
+                    <span class="price-a">rent | {{$house->rent}}.BDT</span>
                   </div>
-                  <a href="{{route('singleHouse.view',$data->id)}}" class="link-a">Click here to view
+                  <a href="{{route('singleHouse.view',$house->id)}}" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -151,15 +151,15 @@
                     
                     <li>
                       <h4 class="card-info-title">Rooms</h4>
-                      <span>{{$data->number_of_room}}</span>
+                      <span>{{$house->number_of_room}}</span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Toilets</h4>
-                      <span>{{$data->number_of_toilet}}</span>
+                      <span>{{$house->number_of_toilet}}</span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Belcony</h4>
-                      <span>{{$data->number_of_belcony}}</span>
+                      <span>{{$house->number_of_belcony}}</span>
                     </li>
                    
                   </ul>

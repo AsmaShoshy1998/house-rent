@@ -11,16 +11,20 @@
             @csrf
         <div class="col-md-6">
             <label for="recipient-name" class="col-form-label">Rent ID:</label>
-            <input value="{{$rents->id}}" type="number" name="rent_id" class="form-control" id="recipient-name">
+            <input readonly value="{{$rents->id}}" type="number" name="rent_id" class="form-control" id="recipient-name">
           </div>
           
           <div class="col-md-5">
             <label for="recipient-name" class="col-form-label">Amount:</label>
-            <input value="{{$rents->house_rent}}" type="number" name="Amount" class="form-control" id="recipient-name">
+            <input readonly value="{{$rents->house_rent}}" type="number" name="Amount" class="form-control" id="recipient-name">
           </div>
           <div class="col-md-4">
             <label for="message-text" class="col-form-label">User ID:</label>
-            <input value="{{$rents->user_id}}" type="number" name="user_id" class="form-control" id="recipient-name">
+            <input readonly value="{{$rents->user_id}}" type="number" name="user_id" class="form-control" id="recipient-name">
+          </div>
+          <div class="col-md-4">
+            <label for="message-text" class="col-form-label">User Name:</label>
+            <input readonly value="{{$rents->user_name}}" type="text" name="user_name" class="form-control" id="recipient-name">
           </div>
           <div class="col-md-4">
             <label for="message-text" class="col-form-label">Month:</label>
@@ -43,7 +47,7 @@
           
           <div class="col-md-3">
             <label for="message-text" class="col-form-label">Pay at:</label>
-            <input type="date" name="date" class="form-control" id="recipient-name">
+            <input type="date" value="{{date('Y-m-d')}}" min="{{date('Y-m-d')}}"  name="date" class="form-control" id="recipient-name">
           </div>
          
        <br></br>

@@ -38,6 +38,7 @@ Route::post('/login/post',[UserController::class,'loginPost'])->name('user.login
 
 
 Route::get('/search',[HouseController::class,'search'])->name('search');
+Route::get('/category/item/{id}',[FrontendHome::class,'categoryitem'])->name('categorywise');
 
 
 

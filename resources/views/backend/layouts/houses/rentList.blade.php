@@ -5,7 +5,6 @@
 
 <h2 >Rent List</h2>
 
-
 <section class="ftco-section">
 <div class="container">
 <!-- <div class="row justify-content-center"> -->
@@ -34,7 +33,9 @@
 <th>House Type</th>
 <th>Beginning Period</th>
 <th>Reason for Rent</th>
-<th>Status</th>
+<th>Rent Status</th>
+<th>Payment Status</th>
+
 <th>Action</th>
 </tr>
 </thead>
@@ -55,6 +56,8 @@
   <th scope="row">{{$rent->description}}</th>
 
   <th scope="row">{{$rent->status}}</th>
+  <th scope="row">{{optional($rent->payment)->status}}</th>
+
   <td><a class="btn btn-danger" href="{{route('payment.create',$rent->id)}}" role="button">  Payment</a>
   
   <a href="{{route('houses.approved',$rent->id)}}" > <i class="fas fa-check-double"></i></a>

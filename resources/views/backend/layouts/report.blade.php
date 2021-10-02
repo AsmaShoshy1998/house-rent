@@ -54,7 +54,8 @@
 <th>House Type</th>
 <th>Beginning Period</th>
 <th>Reason for Rent</th>
-<th>Status</th>
+<th>Rent Status</th>
+<th>Payment Status</th>
 
 </tr>
 </thead>
@@ -75,6 +76,7 @@
   <th scope="row">{{$rent->description}}</th>
 
   <th scope="row">{{$rent->status}}</th>
+  <th scope="row">{{optional($rent->payment)->status}}</th>
   
   
   

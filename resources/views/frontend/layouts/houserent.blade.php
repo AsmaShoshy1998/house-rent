@@ -49,7 +49,7 @@
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">Full Name</span>
-<input  value="{{auth()->user()->full_name}}" class="form-control" type="text" name="name" placeholder="Enter your name">
+<input value="{{auth()->user()->full_name}}" class="form-control" type="text" name="name" placeholder="Enter your name">
 </div>
 </div>
 <div class="col-sm-6">
@@ -77,13 +77,13 @@
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">House ID</span>
-<input  value="{{$houses->id}}" class="form-control" type="text" name="house_id" placeholder="Enter your name">
+<input readonly  value="{{$houses->id}}" class="form-control" type="text" name="house_id" placeholder="Enter your name">
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">House Address</span>
-<input value="{{$houses->address}}" class="form-control" type="text" name="house_address" placeholder="Enter your email">
+<input readonly value="{{$houses->address}}" class="form-control" type="text" name="house_address" placeholder="Enter your email">
 </div>
 </div>
 </div>
@@ -92,19 +92,19 @@
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">House Type</span>
-<input value="{{$houses->category->category_name}}" class="form-control" type="text" name="house_type" placeholder="Enter your phone number">
+<input readonly value="{{$houses->category->category_name}}" class="form-control" type="text" name="house_type" placeholder="Enter your phone number">
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
 <span class="form-label">House Rent</span>
-<input value="{{$houses->rent}}" class="form-control" type="text" name="house_rent" placeholder="Enter your phone number">
+<input readonly value="{{$houses->rent}}" class="form-control" type="text" name="house_rent" placeholder="Enter your phone number">
 </div>
 </div>
 </div>
 <div class="form-group">
 <span class="form-label">For the Beginning Period</span>
-<input class="form-control" type="date" name="beginning_period" placeholder="Enter ZIP/Location">
+<input class="form-control" type="date" value="{{date('Y-m-d')}}" min="{{date('Y-m-d')}}" name="beginning_period" placeholder="Enter ZIP/Location">
 </div>
 
 <div class="form-group">

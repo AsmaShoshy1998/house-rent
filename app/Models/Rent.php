@@ -19,4 +19,9 @@ public function house()
     {
         return $this->belongsto(House::class,'house_id','id');
 }
+public function payment()
+    {
+        return $this->hasOne(Payment::class);
+}
+
 }

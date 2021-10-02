@@ -11,14 +11,14 @@
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
             <h1 class="title-single">Contact US</h1>
-            <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic culpa.</span>
+            <span class="color-text-a">Do you have any questions? Please do not hesitate to contact us directly. We will get back to you within a matter of hours.</span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
+               
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Contact
@@ -88,10 +88,10 @@
                   </div>
                   <div class="icon-box-content">
                     <p class="mb-1">Email.
-                      <span class="color-a">contact@example.com</span>
+                      <span class="color-a">admin@gmail.com</span>
                     </p>
                     <p class="mb-1">Phone.
-                      <span class="color-a">+54 356 945234</span>
+                      <span class="color-a">01825449021</span>
                     </p>
                   </div>
                 </div>
@@ -106,8 +106,8 @@
                   </div>
                   <div class="icon-box-content">
                     <p class="mb-1">
-                      Manhattan, Nueva York 10036,
-                      <br> EE. UU.
+                     Sector - 10,Road No.-10,
+                      <br> House No. - 65,Dhaka-1230.
                     </p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="icon-box-content table-cell">
                   <div class="icon-box-title">
-                    <h4 class="icon-title">Social networks</h4>
+                   
                   </div>
                   <div class="icon-box-content">
                     <div class="socials-footer">

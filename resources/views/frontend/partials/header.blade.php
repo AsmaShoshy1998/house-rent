@@ -26,9 +26,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('user.house')}}">Houses</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="">News</a>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a class="nav-link" href="{{route('user.about')}}">About</a>
