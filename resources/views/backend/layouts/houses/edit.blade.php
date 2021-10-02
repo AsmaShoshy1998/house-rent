@@ -68,14 +68,8 @@
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inputAddress2">Status</label>
-      <select  type="text" required class="custom-select mr-sm-2" name='status'  id="inlineFormCustomSelect">
-      <option 
-           selected
-           value="{{$houses->status}}">{{$houses->status}}</option>
-
-        <option>active</option>
-       
-      </select>
+      <input value="{{$houses->status}}" type="text" class="form-control" name='address' id="validationDefault02"  required>
+      
     </div>
     </div>
     

@@ -19,7 +19,7 @@
         <section class="content-header">
         
           <h1>
-            Booking Information
+            Rent Information
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"></i> Booking ID : </a></li>
