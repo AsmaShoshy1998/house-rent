@@ -5,7 +5,7 @@
 
 
 <br></br>
-<h2>Update Your Category</h2>
+<h2>Update Amenities</h2>
       
         <form action="{{route('amenities.put',$amenities->id)}}" type="form" method="POST" enctype="multipart/form-data">
         @method('PUT')
@@ -18,7 +18,7 @@
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label for="category_name"><h5>Category Name</h5></label>
+                            <label for="category_name"><h5>Amenities Name</h5></label>
                             <input value="{{$amenities->name}}" type="text" class="form-control" id="category_name" name="name" placeholder="Enter Category Name">
                                                   
                         </div>

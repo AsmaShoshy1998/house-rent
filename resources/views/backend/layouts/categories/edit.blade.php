@@ -5,7 +5,7 @@
 
 
 <br></br>
-<h2>Update Your Category</h2>
+<h2>Update Category</h2>
       
         <form action="{{route('category.put',$categories->id)}}" type="form" method="POST" enctype="multipart/form-data">
         @method('PUT')
