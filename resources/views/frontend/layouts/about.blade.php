@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">We Do Great Design For Creative Folks</h1>
+            <h1 class="title-single">About House</h1>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -35,48 +35,43 @@
   <!--/ Intro Single End /-->
 
   <!--/ About Star /-->
+  
   <section class="section-about">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="about-img-box">
-            <img src="{{url('/frontend/img/slide-about-1.jpg')}}" alt="" class="img-fluid">
+            <img src="//images01.nicepage.com/c461c07a441a5d220e8feb1a/d0bbdfb28cbc5e918d68f21e/rrrrr-min.jpg" alt="" class="img-fluid">
           </div>
           <div class="sinse-box">
-            <h3 class="sinse-title">EstateAgency
-              <span></span>
-              <br> Sinse 2017</h3>
-            <p>Art & Creative</p>
+            <h3 class="sinse-title">Ashakana Mohol
+              
+              <br> Sinse 1996</h3>
+            
           </div>
         </div>
         <div class="col-md-12 section-t8">
           <div class="row">
             <div class="col-md-6 col-lg-5">
-              <img src="{{url('/frontend/img/about-2.jpg')}}" alt="" class="img-fluid">
+              
             </div>
             <div class="col-lg-2  d-none d-lg-block">
               <div class="title-vertical d-flex justify-content-start">
-                <span>EstateAgency Exclusive Property</span>
+                <span>Ashakana Mohol Exclusive Property</span>
               </div>
             </div>
             <div class="col-md-6 col-lg-5 section-md-t3">
               <div class="title-box-d">
-                <h3 class="title-d">Sed
-                  <span class="color-d">porttitor</span> lectus
-                  <br> nibh.</h3>
+                
               </div>
               <p class="color-text-a">
-                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget
-                consectetur sed, convallis
-                at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+              House – a place where one is free to say and do what he wants, because nobody cares
               </p>
               <p class="color-text-a">
-                Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-                Mauris blandit aliquet
-                elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed,
-                convallis at tellus.
+              <div class="d-flex justify-content-center">
+  
+  The vacant flat surely is a reasonable deal compared with other flats in the area. The flat is completed with large windows and balconies to make sure there is proper ventilation throughout the flat. The washrooms are installed with fittings with a high durability guarantee. You will have the privilege to own a nice parking with great security for this flat. A private parking space comes with the offered flat for your vehicle accommodation.
+  </div>
               </p>
             </div>
           </div>

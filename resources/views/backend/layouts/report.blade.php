@@ -23,8 +23,13 @@
 
 </div>
     </form>  
-<div id="printableArea">
-<h2 >Rent List</h2>
+    
+    <br> </br>
+    <div id="printableArea">
+<div class="d-flex justify-content-center">
+    <h1> Ashakana Mohol</h1>
+</div>
+
 
 <section class="ftco-section">
 <div class="container">

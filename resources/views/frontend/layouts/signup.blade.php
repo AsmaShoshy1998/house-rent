@@ -75,7 +75,7 @@ body {
  <label for="number" class="cols-sm-2 control-label">NID Number</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input required type="number" class="form-control" name="NID Number" id="name" placeholder="Enter your NID Number" required>
+<input type="number" class="form-control" name="NID_Number" id="name" placeholder="Enter your NID Number" required>
 </div>
 </div>
 </div>
@@ -83,7 +83,7 @@ body {
  <label for="number" class="cols-sm-2 control-label">Phone Number</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input required type="number" class="form-control" name="Phone Number" id="name" placeholder="Enter your Phone Number">
+<input required type="number" class="form-control" name="Phone_Number" id="name" placeholder="Enter your Phone Number">
 </div>
 </div>
 </div>
@@ -91,7 +91,7 @@ body {
  <label for="present_address" class="cols-sm-2 control-label">Present Address</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input required type="text" class="form-control" name="Present Address" id="name" placeholder="">
+<input required type="text" class="form-control" name="Present_Address" id="name" placeholder="">
 </div>
 </div>
 </div>
@@ -99,7 +99,7 @@ body {
  <label for="permanent_address" class="cols-sm-2 control-label">Permanent Address</label>
 <div class="cols-sm-10">
 <div class="input-group">
-<input required type="text" class="form-control" name="Permanent Address" id="name" placeholder="">
+<input required type="text" class="form-control" name="Permanent_Address" id="name" placeholder="">
 </div>
 </div>
 </div>

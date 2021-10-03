@@ -28,7 +28,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'NID_Number' => 'required|max:13',
-            'Phone_Number' => 'required',
+            'Phone_Number' => 'required|min:11',
             'Present_Address' => 'required',
             'Permanent_Address' => 'required',
             'Occupation' => 'required',

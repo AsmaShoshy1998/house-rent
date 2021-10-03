@@ -17,10 +17,13 @@
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-        
-          <h1>
+        <div id="printableArea">
+<div class="d-flex justify-content-center">
+    <h1> Ashakana Mohol</h1>
+</div>
+          <h2>
             Rent Information
-          </h1>
+          </h2>
           <ol class="breadcrumb">
             <li><a href="#"></i> Booking ID : </a></li>
             <li class="active"> {{$rents->id}}</li>
@@ -33,7 +36,7 @@
 		
           <!-- info row -->
           <div class="row invoice-info">
-		  <div class="col-sm-12"><h1>Information of the Tenant:</h1></div>
+		  <div class="col-sm-12"><h2>Information of the Tenant:</h2></div>
             <div class="col-sm-6 invoice-col">
 			  <p><b>Name of Tenant         :</b> {{$rents->user_name}}</p>
 			  <p><b>Tenant's Email         :</b> {{$rents->user_email}}</p>
@@ -56,14 +59,9 @@
             <!-- accepted payments column -->
 			
             <div class="col-xs-12">
-			<h1>House details:</h1>
+			<h2>House details:</h2>
               <div class="table" >
-                <table class="table" style="margin-bottom:0px;">
-                  <tr><td>
-				  As per booking created on July 26, 2021, House details are as below:
-				  </td>
-				  </tr>
-				  </table>
+                
 			  </div>
 			</div>
             <div class="col-xs-12">
@@ -85,6 +83,12 @@
                     <th style="width:50%">House Rent:</th>
                     <td>{{$rents->house_rent}}</td>
                   </tr>
+                  <th style="width:50%">Rent Status:</th>
+                    <td>{{$rents->status}}</td>
+                  </tr>
+                  <th style="width:50%">Payment Status:</th>
+                    <td>{{optional($rents->payment)->status}}</td>
+                  </tr>
 				  
 				  
 				  
@@ -96,10 +100,7 @@
 <!-- Table row -->
             		  <div class="row">
 		  <div class="col-xs-12">
-              <p class="lead"><b>Payment Methods:</b></p>
               
-                They can pay physically in Landlord's House .
-              </p>
               </div>
 			  
             </div><!-- /.col -->
