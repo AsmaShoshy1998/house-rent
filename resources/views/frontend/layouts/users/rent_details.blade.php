@@ -27,6 +27,7 @@
 <th>Reason for Rent</th>
 <th>Rent Status</th>
 <th>Payment Status</th>
+<th>Action</th>
 
       
       </tr>
@@ -49,6 +50,7 @@
 
   <th scope="row">{{$rent->status}}</th>
   <th scope="row">{{optional($rent->payment)->status}}</th>
+  <td><a class="btn btn-danger" href="{{route('payment.create',$rent->id)}}" role="button">  Payment</a></th>
  
     </tr>
     @endforeach

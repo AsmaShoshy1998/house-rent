@@ -15,7 +15,7 @@ class HousesController extends Controller
     public function listall()
     {
         $amenities=Amenities::all();
-        $houses= house::with('category','HouseAmenities')->paginate('4');
+        $houses= house::with('category','HouseAmenities')->paginate('15');
         $categories=Category::all();
     return view('backend.layouts.houses.listall',compact('houses','categories','amenities'));
     }

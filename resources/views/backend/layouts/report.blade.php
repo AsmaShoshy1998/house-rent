@@ -27,7 +27,7 @@
     <br> </br>
     <div id="printableArea">
 <div class="d-flex justify-content-center">
-    <h1> Ashakana Mohol</h1>
+    <h1> Ashkana Mohol</h1>
 </div>
 
 

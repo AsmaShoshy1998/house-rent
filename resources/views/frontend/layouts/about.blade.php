@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">About House</h1>
+            <h1 class="title-single">About Us</h1>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -44,9 +44,9 @@
             <img src="//images01.nicepage.com/c461c07a441a5d220e8feb1a/d0bbdfb28cbc5e918d68f21e/rrrrr-min.jpg" alt="" class="img-fluid">
           </div>
           <div class="sinse-box">
-            <h3 class="sinse-title">Ashakana Mohol
+            <h3 class="sinse-title">Ashkana Mohol
               
-              <br> Sinse 1996</h3>
+              <br> Since 1996</h3>
             
           </div>
         </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-lg-2  d-none d-lg-block">
               <div class="title-vertical d-flex justify-content-start">
-                <span>Ashakana Mohol Exclusive Property</span>
+                <span>Ashkana Mohol Exclusive Property</span>
               </div>
             </div>
             <div class="col-md-6 col-lg-5 section-md-t3">

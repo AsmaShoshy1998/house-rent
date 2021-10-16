@@ -117,6 +117,7 @@ body {
         <option >Teacher</option>
         <option >Businessman</option>
         <option >Politicians</option>
+        <option >Others</option>
       </select>
 </div>
  </div>
